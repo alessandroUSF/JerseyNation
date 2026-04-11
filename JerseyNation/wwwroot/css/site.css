@@ -1,0 +1,205 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/*My custom style*/
+
+body {
+    background: linear-gradient(180deg, #1f2428 0%, #2b3036 100%);
+    color: #d9fbe1;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.custom-navbar {
+    background-color: #111111 !important;
+    border-bottom: 1px solid #222 !important;
+}
+
+    .custom-navbar .navbar-brand,
+    .custom-navbar .navbar-brand:visited,
+    .custom-navbar .navbar-brand:focus {
+        color: #ffffff !important;
+        font-weight: 800;
+    }
+
+        .custom-navbar .navbar-brand:hover {
+            color: #57e389 !important;
+        }
+
+    .custom-navbar .nav-link,
+    .custom-navbar .nav-link:visited,
+    .custom-navbar .nav-link:focus {
+        color: #ffffff !important;
+        font-weight: 600;
+    }
+
+        .custom-navbar .nav-link:hover {
+            color: #57e389 !important;
+        }
+
+.brand-jn {
+    color: #ffffff !important;
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 0.6px;
+}
+
+    .brand-jn:hover {
+        color: #57e389 !important;
+    }
+
+.menu-link {
+    color: #ffffff !important;
+    font-weight: 600;
+    margin-right: 0.6rem;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+    .menu-link:hover {
+        color: #57e389 !important;
+        border-bottom: 2px solid #57e389;
+    }
+.navbar-brand:hover {
+    color: #7bf1a8 !important;
+}
+
+.container main,
+.page-spacer,
+.section-card {
+    color: #e9f7ee;
+}
+
+.hero-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #57e389;
+    margin-bottom: 0.8rem;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: #d7e7db;
+    max-width: 850px;
+}
+
+.section-card {
+    background: rgba(33, 38, 43, 0.92);
+    border: 1px solid #3c444d;
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    margin-bottom: 1rem;
+}
+
+.search-box input,
+.form-control,
+.form-select {
+    background-color: #2b3036;
+    color: #f3fff6;
+    border: 1px solid #4c5864;
+}
+
+    .search-box input::placeholder,
+    .form-control::placeholder {
+        color: #a7b7ac;
+    }
+
+    .search-box input:focus,
+    .form-control:focus,
+    .form-select:focus {
+        background-color: #2b3036;
+        color: #ffffff;
+        border-color: #57e389;
+        box-shadow: 0 0 0 0.2rem rgba(87, 227, 137, 0.2);
+    }
+
+.btn-primary {
+    background-color: #57e389;
+    border-color: #57e389;
+    color: #162018;
+    font-weight: 700;
+}
+
+    .btn-primary:hover {
+        background-color: #45c972;
+        border-color: #45c972;
+        color: #101814;
+    }
+
+.btn-outline-primary {
+    color: #57e389;
+    border-color: #57e389;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #57e389;
+        border-color: #57e389;
+        color: #162018;
+    }
+
+.jersey-badge {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background-color: rgba(87, 227, 137, 0.12);
+    color: #7bf1a8;
+    border: 1px solid rgba(87, 227, 137, 0.35);
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.footer {
+    background-color: rgba(24, 28, 31, 0.95);
+    color: #aab8ad !important;
+}
+
+    .footer a {
+        color: #57e389 !important;
+    }
+
+h1 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    color: #57e389;
+}
+
+h2, h3, h4, h5 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #57e389;
+}
+
+p, li, label, span {
+    color: #e3efe7;
+}
