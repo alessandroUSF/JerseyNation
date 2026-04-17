@@ -1,24 +1,41 @@
+using JerseyNation.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace JerseyNation.Pages;
-
-public class ProductDetailsModel : PageModel
+namespace JerseyNation.Pages
 {
-    [BindProperty(SupportsGet = true)]
-    public int? Id { get; set; }
-
-    public string ProductMessage { get; private set; } = "";
-
-    public void OnGet()
+    public class ProductDetailsModel : PageModel
     {
-        if (Id.HasValue)
+        [BindProperty(SupportsGet = true)]
+        public int? Id { get; set; }
+
+        public string ProductMessage { get; private set; } = "";
+        public string ProductId { get; private set; } = "";
+        public string ProductName { get; private set; } = "";
+
+        public void OnGet()
         {
-            ProductMessage = $"This page would currently show the details for jersey ID '{Id.Value}'.";
-        }
-        else
-        {
-            ProductMessage = "No jersey ID was provided.";
+            if (!Id.HasValue)
+            {
+                ProductMessage = "No jersey ID was provided.";
+                ProductId = "Product ID error.";
+                ProductName = "Product Name error.";
+                return;
+            }
+
+            var jersey = JerseyStore.GetJerseyById(Id.Value);
+
+            if (jersey == null)
+            {
+                ProductMessage = $"No jersey was found for ID '{Id.Value}'.";
+                ProductId = Id.Value.ToString();
+                ProductName = "Product not found.";
+                return;
+            }
+
+            ProductId = jersey.Id.ToString();
+            ProductName = jersey.Name;
+            ProductMessage = $"This page would currently show the details for jersey ID '{jersey.Id}'.";
         }
     }
 }

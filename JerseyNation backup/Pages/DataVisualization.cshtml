@@ -1,0 +1,65 @@
+﻿@page
+@model DataVisualizationModel
+@{
+    ViewData["Title"] = "Data Visualization";
+}
+
+<div class="page-spacer">
+    <section class="section-card mb-4">
+        <h1>Data Visualization</h1>
+        <p>
+            This page presents three interactive Chart.js visualizations related to the JerseyNation e-commerce prototype.
+            The current charts use fixed dummy data designed to simulate realistic business activity. In a production version,
+            these metrics would be dynamically retrieved from a database and connected to live operational data.
+        </p>
+    </section>
+
+    <section class="section-card mb-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+            <h2 class="mb-0">Performance Overview</h2>
+
+            <select id="performanceView" class="form-select chart-filter">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+        </div>
+
+        <p>
+            This chart combines jerseys sold, revenue, costs, and profit. The dropdown allows the user to switch between daily,
+            weekly, and monthly views.
+        </p>
+        <canvas id="dailyPerformanceChart"></canvas>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2>Team Jersey Views, Purchases, Revenue, and Conversion</h2>
+        <p>
+            This chart compares views, purchases, and revenue across selected national teams. Conversion rate is displayed above
+            the purchase bars to show how effectively product views turn into sales.
+        </p>
+        <canvas id="teamPerformanceChart"></canvas>
+    </section>
+
+    <section class="section-card mb-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+            <h2 class="mb-0">Marketing and Performance</h2>
+
+            <select id="marketingView" class="form-select chart-filter">
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+        </div>
+
+        <p>
+            This chart shows how marketing spend may influence site visits and orders over time. Tooltip details also display
+            conversion rate and average order value.
+        </p>
+        <canvas id="marketingPerformanceChart"></canvas>
+    </section>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="~/js/charts-data.js" asp-append-version="true"></script>
+}

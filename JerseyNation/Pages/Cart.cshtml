@@ -13,4 +13,83 @@
     <p>
         It would also allow users to update quantities, remove items, apply promotions, and continue to checkout.
     </p>
+
+    <div class="mt-4">
+        <h3>Current Cart Status</h3>
+        <p id="cartStatusMessage">Loading cart...</p>
+
+        <ul id="cartItemsList" class="mb-4"></ul>
+
+        <div class="d-flex gap-2 flex-wrap">
+            <button type="button" class="btn btn-outline-primary" id="clearCartBtn">Clear Cart</button>
+            <a class="btn btn-primary" asp-page="/Shop">Back to Shop</a>
+        </div>
+    </div>
 </div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const statusMessage = document.getElementById("cartStatusMessage");
+            const itemsList = document.getElementById("cartItemsList");
+            const clearBtn = document.getElementById("clearCartBtn");
+
+            function updateCartCountUI() {
+                const cartCountElements = document.querySelectorAll(".cart-count");
+                const cartButtons = document.querySelectorAll(".btn-cart");
+                const cartCount = parseInt(localStorage.getItem("cartCount") || "0", 10);
+
+                cartCountElements.forEach(el => {
+                    if (cartCount > 0) {
+                        el.textContent = cartCount;
+                        el.style.display = "inline-flex";
+                    } else {
+                        el.textContent = "";
+                        el.style.display = "none";
+                    }
+                });
+
+                cartButtons.forEach(btn => {
+                    if (cartCount > 0) {
+                        btn.classList.add("has-count");
+                    } else {
+                        btn.classList.remove("has-count");
+                    }
+                });
+            }
+
+            function renderCart() {
+                const cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
+
+                itemsList.innerHTML = "";
+
+                if (cartItems.length === 0) {
+                    statusMessage.textContent = "The cart is currently empty.";
+                    clearBtn.style.display = "none";
+                    updateCartCountUI();
+                    return;
+                }
+
+                const names = cartItems.map(item => `${item.name} (ID ${item.id})`).join(", ");
+                statusMessage.textContent = `The cart currently contains: ${names}.`;
+
+                cartItems.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = `${item.name} - ID ${item.id} - Qty ${item.quantity}`;
+                    itemsList.appendChild(li);
+                });
+
+                clearBtn.style.display = "inline-block";
+                updateCartCountUI();
+            }
+
+            clearBtn.addEventListener("click", function () {
+                localStorage.removeItem("cartItems");
+                localStorage.removeItem("cartCount");
+                renderCart();
+            });
+
+            renderCart();
+        });
+    </script>
+}

@@ -315,6 +315,63 @@ function reorderForYouSection() {
 
 }
 
+// Cart
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cartCountElements = document.querySelectorAll(".cart-count");
+    if (cartCountElements.length === 0) return;
+
+    const cartCount = parseInt(localStorage.getItem("cartCount") || "0", 10);
+
+    cartCountElements.forEach(el => {
+        if (cartCount > 0) {
+            el.textContent = cartCount;
+            el.style.display = "inline-flex";
+        } else {
+            el.textContent = "";
+            el.style.display = "none";
+        }
+    });
+
+    const cartButtons = document.querySelectorAll(".btn-cart");
+    cartButtons.forEach(btn => {
+        if (cartCount > 0) {
+            btn.classList.add("has-count");
+        } else {
+            btn.classList.remove("has-count");
+        }
+    });
+});
+
+
+function updateCartCountUI() {
+    const cartCountElements = document.querySelectorAll(".cart-count");
+    const cartButtons = document.querySelectorAll(".btn-cart");
+    const cartCount = parseInt(localStorage.getItem("cartCount") || "0", 10);
+
+    cartCountElements.forEach(el => {
+        if (cartCount > 0) {
+            el.textContent = cartCount;
+            el.style.display = "inline-flex";
+        } else {
+            el.textContent = "";
+            el.style.display = "none";
+        }
+    });
+
+    cartButtons.forEach(btn => {
+        if (cartCount > 0) {
+            btn.classList.add("has-count");
+        } else {
+            btn.classList.remove("has-count");
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", updateCartCountUI);
+window.addEventListener("storage", updateCartCountUI);
+
+
 // Shop Page Initialization
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -1,0 +1,113 @@
+﻿@page
+@model CreateModel
+@{
+    ViewData["Title"] = "Create Jersey";
+}
+
+<div class="section-card">
+    <h1>Create Jersey</h1>
+
+    <form method="post" class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">Performed By</label>
+            <input asp-for="PerformedBy" class="form-control" />
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Team</label>
+            <input asp-for="NewJersey.Team" class="form-control" />
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Name</label>
+            <input asp-for="NewJersey.Name" class="form-control" />
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Jersey Type</label>
+            <input asp-for="NewJersey.JerseyType" class="form-control" />
+        </div>
+
+        <div class="col-md-4">
+            <label class="form-label">Audience</label>
+            <input asp-for="NewJersey.Audience" class="form-control" />
+        </div>
+
+        <div class="col-md-4">
+            <label class="form-label">Color</label>
+            <input asp-for="NewJersey.Color" class="form-control" />
+        </div>
+
+        <div class="col-md-4">
+            <label class="form-label">Jersey Number</label>
+            <input asp-for="NewJersey.JerseyNumber" class="form-control" type="number" />
+        </div>
+
+        <div class="col-md-4">
+            <label class="form-label">Cost Price</label>
+            <input asp-for="NewJersey.CostPrice" class="form-control" type="number" step="0.01" />
+        </div>
+
+        <div class="col-md-4">
+            <label class="form-label">Sale Price</label>
+            <input asp-for="NewJersey.SalePrice" class="form-control" type="number" step="0.01" />
+        </div>
+
+        <div class="col-md-4">
+            <label class="form-label">Promo Price</label>
+            <input asp-for="NewJersey.PromoPrice" class="form-control" type="number" step="0.01" />
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Available Sizes (comma separated)</label>
+            <input asp-for="AvailableSizesText" class="form-control" placeholder="S, M, L, XL" />
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Unavailable Sizes (comma separated)</label>
+            <input asp-for="UnavailableSizesText" class="form-control" placeholder="XXL" />
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Primary Image</label>
+            <input asp-for="NewJersey.PrimaryImage" class="form-control" />
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">Secondary Image</label>
+            <input asp-for="NewJersey.SecondaryImage" class="form-control" />
+        </div>
+
+        <div class="col-12">
+            <label class="form-label">Description</label>
+            <textarea asp-for="NewJersey.Description" class="form-control" rows="3"></textarea>
+        </div>
+
+        <div class="col-12 d-flex flex-wrap gap-3">
+            <div class="form-check">
+                <input asp-for="NewJersey.IsPromotion" class="form-check-input" />
+                <label class="form-check-label" asp-for="NewJersey.IsPromotion">Promotion</label>
+            </div>
+
+            <div class="form-check">
+                <input asp-for="NewJersey.IsSpecial" class="form-check-input" />
+                <label class="form-check-label" asp-for="NewJersey.IsSpecial">Special</label>
+            </div>
+
+            <div class="form-check">
+                <input asp-for="NewJersey.IsGoalkeeperJersey" class="form-check-input" />
+                <label class="form-check-label" asp-for="NewJersey.IsGoalkeeperJersey">Goalkeeper</label>
+            </div>
+
+            <div class="form-check">
+                <input asp-for="NewJersey.IsSigned" class="form-check-input" />
+                <label class="form-check-label" asp-for="NewJersey.IsSigned">Signed</label>
+            </div>
+        </div>
+
+        <div class="col-12 mt-3">
+            <button type="submit" class="btn btn-primary">Create Jersey</button>
+            <a asp-page="/Read" class="btn btn-outline-light ms-2">Back to Read</a>
+        </div>
+    </form>
+</div>

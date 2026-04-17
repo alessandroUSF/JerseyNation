@@ -1,0 +1,98 @@
+﻿@page
+@model DataVisualizationModel
+@{
+    ViewData["Title"] = "Data Visualization";
+}
+
+<div class="page-spacer">
+    <section class="section-card mb-4">
+        <h1>Data Visualization</h1>
+        <p>
+            This page presents three interactive Chart.js visualizations related to the JerseyNation e-commerce prototype.
+            The current charts use fixed dummy data designed to simulate realistic business activity. In a production version,
+            these metrics would be dynamically retrieved from a database and connected to live operational data.
+        </p>
+    </section>
+
+    <section class="section-card mb-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+            <h2 class="mb-0">Performance Overview</h2>
+
+            <select id="performanceView" class="form-select chart-filter">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+        </div>
+
+        <p>
+            This chart combines jerseys sold, revenue, costs, and profit. The dropdown allows the user to switch between daily,
+            weekly, and monthly views.
+        </p>
+        <canvas id="dailyPerformanceChart"></canvas>
+    </section>
+
+
+    <section class="section-card mb-4">
+        <h2>Team Jersey Views, Purchases, Revenue, and Conversion</h2>
+        <p>
+            This chart compares views, purchases, and revenue across selected national teams. Conversion rate is displayed above
+            the purchase bars to show how effectively product views turn into sales.
+        </p>
+        <canvas id="teamPerformanceChart"></canvas>
+    </section>
+
+
+    <section>
+
+        <div class="section-card mt-4">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                <div>
+                    <h2 class="mb-1">Sales Mix by Country</h2>
+                    <p class="mb-0" id="countrySalesSummary">
+                        Select a country to see simulated sales by jersey type, total quantity, and total revenue.
+                    </p>
+                </div>
+            </div>
+
+            <div id="countrySalesSelector" class="flag-strip mb-3"></div>
+
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <canvas id="countryTypePieChart"></canvas>
+                </div>
+                <div class="col-lg-5">
+                    <div class="section-card h-100">
+                        <h3 class="mb-3">Selected Country Totals</h3>
+                        <p class="mb-2"><strong>Country:</strong> <span id="selectedCountryName">Brazil</span></p>
+                        <p class="mb-2"><strong>Total jerseys sold:</strong> <span id="selectedCountryQty">0</span></p>
+                        <p class="mb-0"><strong>Total sales value:</strong> <span id="selectedCountryValue">US$ 0.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-card mb-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+            <h2 class="mb-0">Marketing and Performance</h2>
+
+            <select id="marketingView" class="form-select chart-filter">
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+        </div>
+
+        <p>
+            This chart shows how marketing spend may influence site visits and orders over time. Tooltip details also display
+            conversion rate and average order value.
+        </p>
+        <canvas id="marketingPerformanceChart"></canvas>
+    </section>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="~/js/charts-data.js" asp-append-version="true"></script>
+}

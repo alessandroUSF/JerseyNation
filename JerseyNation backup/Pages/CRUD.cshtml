@@ -1,0 +1,87 @@
+﻿@page
+@model CRUDModel
+@{
+    ViewData["Title"] = "CRUD Navigation";
+}
+
+<div class="page-spacer">
+    <section class="section-card mb-4">
+        <h1>CRUD Navigation</h1>
+        <p>
+            This page represents the administrative area of the JerseyNation project and provides access to the main
+            CRUD operations of the product catalog.
+        </p>
+        <p>
+            In a real production environment, this section would be restricted to authorized users only and protected
+            by a secure login and password system.
+        </p>
+        <p>
+            All update and delete operations are registered in an audit log, including the user responsible, timestamp,
+            affected product, and action details.
+        </p>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2 class="mb-3">Administrative Menu</h2>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-xl-3">
+                <a asp-page="/Create" class="section-card crud-card d-block text-decoration-none">
+                    <h3>Create</h3>
+                    <p>Add a new jersey to the catalog.</p>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+                <a asp-page="/Read" class="section-card crud-card d-block text-decoration-none">
+                    <h3>Read</h3>
+                    <p>View all jerseys and access update or delete shortcuts.</p>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+                <a asp-page="/Update" class="section-card crud-card d-block text-decoration-none">
+                    <h3>Update</h3>
+                    <p>Edit an existing jersey from the catalog.</p>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+                <a asp-page="/Delete" class="section-card crud-card d-block text-decoration-none">
+                    <h3>Delete</h3>
+                    <p>Remove a jersey from the catalog with confirmation.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <h2 class="mb-3">Recent Audit Log</h2>
+
+        <div class="table-responsive">
+            <table class="table table-dark table-hover align-middle crud-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Action</th>
+                        <th>User</th>
+                        <th>Jersey</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var log in Model.RecentLogs)
+                    {
+                        <tr>
+                            <td>@log.Timestamp.ToString("MM/dd/yyyy HH:mm")</td>
+                            <td>@log.ActionType</td>
+                            <td>@log.PerformedBy</td>
+                            <td>@log.JerseyName</td>
+                            <td>@log.Details</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

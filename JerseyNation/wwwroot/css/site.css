@@ -100,18 +100,6 @@ body {
     }
 
 
-.menu-link {
-    color: #ffffff !important;
-    font-weight: 600;
-    margin-right: 0.6rem;
-    transition: color 0.2s ease, border-color 0.2s ease;
-    border-bottom: 2px solid transparent;
-}
-
-    .menu-link:hover {
-        color: #57e389 !important;
-        border-bottom: 2px solid #57e389;
-    }
 .navbar-brand:hover {
     color: #7bf1a8 !important;
 }
@@ -240,10 +228,11 @@ p, li, label, span {
 }
 
 .shop-toolbar-brand {
-    font-size: 1.7rem;
+    font-size: 2.1rem;
     font-weight: 800;
     color: #1f7a4d;
     letter-spacing: 0.5px;
+    margin-left: 10px;
 }
 
 .btn-explore {
@@ -265,6 +254,10 @@ p, li, label, span {
     border: none;
     font-weight: 700;
     position: relative;
+    padding-right: 1rem;
+}
+
+.btn-cart.has-count {
     padding-right: 2.8rem;
 }
 
@@ -743,4 +736,99 @@ p, li, label, span {
     border: 1px solid rgba(80, 180, 255, 0.35);
     font-size: 0.78rem;
     font-weight: 700;
+}
+
+#dailyPerformanceChart,
+#teamPerformanceChart,
+#marketingPerformanceChart {
+    width: 100% !important;
+    min-height: 360px;
+}
+
+#countryTypePieChart {
+    max-width: 420px;
+    max-height: 420px;
+    margin: 0 auto;
+    display: block;
+}
+
+.country-sales-link {
+    border: 1px solid #3c444d;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+    .country-sales-link.active-country {
+        border-color: #57e389;
+        box-shadow: 0 0 0 1px rgba(87, 227, 137, 0.25);
+    }
+
+.team-group-title {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-bottom: 0.9rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    padding-bottom: 0.25rem;
+}
+
+.team-group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.65rem 1.4rem;
+}
+
+.team-group-link {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    text-decoration: none;
+    color: #dfe9e2;
+    padding: 0.15rem 0;
+}
+
+.team-group-link:hover {
+    color: #9af7b9;
+    text-decoration: none;
+}
+
+.team-group-link .flag-img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.team-group-link .flag-name::before {
+    content: "  ";
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+
+
+.crud-card {
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .crud-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .crud-card h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .crud-card p {
+        margin-bottom: 0;
+    }
+
+.crud-table th,
+.crud-table td {
+    vertical-align: middle;
 }

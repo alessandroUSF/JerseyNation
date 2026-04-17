@@ -1,0 +1,99 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "JerseyNation";
+}
+
+<div class="page-spacer">
+    <section class="text-center mb-5">
+        <h1 class="hero-title">Welcome to JerseyNation</h1>
+        <p class="hero-subtitle mx-auto">
+            JerseyNation is a web application project designed as an online store for national team jerseys related to the 2026 World Cup.
+            The platform was created to combine e-commerce structure, data organization and business-oriented analytics in a clean and modern interface.
+        </p>
+
+        <div class="mt-4 d-flex justify-content-center flex-wrap gap-2">
+            <a asp-page="/Shop" class="btn btn-primary">The Shop</a>
+            <a asp-page="/DataVisualization" class="btn btn-outline-primary">View Charts</a>
+            <a asp-page="/APIs" class="btn btn-outline-light">APIs</a>
+            <a asp-page="/Chatbot" class="btn btn-outline-light">Chatbot Config</a>
+            <a href="https://github.com/alessandroUSF/JerseyNation" target="_blank" class="btn btn-outline-light">GitHub Repository</a>
+        </div>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2>Project idea</h2>
+        <p>
+            The main idea of this project is to simulate an online jersey store where users can explore products from different national teams,
+            compare jersey options and view product details in an organized and visually appealing way. The project focuses on World Cup 2026 related
+            merchandise and presents a strong foundation for a future complete e-commerce solution. A key differentiator of the platform is its focus
+            not only on standard jersey sales, but also on rare national team jerseys, signed pieces and authentic items worn in World Cup matches
+            and training sessions.
+        </p>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2>Purpose</h2>
+        <p>
+            The purpose of JerseyNation is to demonstrate how a Razor Pages application can support a realistic business case.
+            It connects front-end design, product presentation and analytics into a single academic project.
+            The website was structured to show how an online store can be organized while also leaving room for future database integration,
+            inventory control and restricted administrative features.
+        </p>
+    </section>
+
+    <section class="mb-4">
+        <h2 class="mb-3">Key features</h2>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100">
+                    <h3>Jersey catalog</h3>
+                    <p>
+                        The store presents jerseys by national team and includes important product attributes such as version,
+                        color and audience. It also aims to offer premium items such as rare jerseys, autographed pieces
+                        and match-worn or training-worn products.
+                    </p>
+                    <div class="mt-3">
+                        <span class="jersey-badge">Player Jersey</span>
+                        <span class="jersey-badge">Home and Away</span>
+                        <span class="jersey-badge">Training</span>
+                        <span class="jersey-badge">Women and Youth</span>
+                        <span class="jersey-badge">Youth</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100">
+                    <h3>Search and browsing</h3>
+                    <p>
+                        Users can browse the available products and search for jerseys by team, style or category,
+                        making the shopping experience clearer and more user-friendly.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100">
+                    <h3>Business analytics</h3>
+                    <p>
+                        The charts page supports the analytical side of the project by displaying sample business metrics such as sales,
+                        product interest and performance trends.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <h2>Project scope</h2>
+        <p>
+            At this stage, JerseyNation works as a structured prototype that introduces the website concept, highlights the main pages
+            and demonstrates how the final system can evolve. Future improvements may include an AI-based simulator that allows customers
+            to visualize themselves wearing a jersey, APIs for connection with suppliers and delivery companies, automated sales through
+            bots, and an affiliate program. Additional future developments may also include marketing data integration, cookie-based website
+            analytics, and connections with Google tools to support tracking, performance measurement and digital marketing decisions.
+        </p>
+    </section>
+</div>

@@ -21,6 +21,7 @@
                         <li><a class="dropdown-item" href="#promotions">🔥 Promotions</a></li>
                         <li><a class="dropdown-item" href="#for-you">⭐ For You</a></li>
                         <li><a class="dropdown-item" href="#special-jerseys">👑 Special Jerseys</a></li>
+                        <li><a class="dropdown-item" href="#browse-by-team">🌍 Browse by Team</a></li>
                     </ul>
                 </div>
 
@@ -31,10 +32,7 @@
 
                 <a asp-page="/Cart" class="btn btn-cart">
                     🛒 Cart
-                    @if (cartItems > 0)
-                    {
-                        <span class="cart-count">@cartItems</span>
-                    }
+                    <span class="cart-count" style="display:none;"></span>
                 </a>
             </div>
         </div>
@@ -391,18 +389,25 @@
         </div>
     </section>
 
-    <section class="section-card mb-4">
-        <h2 class="mb-3">Browse by team</h2>
+    <section id="browse-by-team" class="section-card mb-4">
+        <h2 class="mb-4">Browse by Team</h2>
 
-        <div class="flag-strip">
-            @foreach (var team in Model.Teams)
-            {
-                <a asp-page="/AllJerseys" asp-route-team="@team.Name" class="flag-link" title="@team.Name">
-                    <img src="@team.FlagImage" alt="@team.Name flag" class="flag-img" />
-                    <span class="flag-name">@team.Name</span>
-                </a>
-            }
-        </div>
+        @foreach (var group in Model.TeamGroups)
+        {
+            <div class="team-group-block mb-4">
+                <h3 class="team-group-title">@group.GroupName</h3>
+
+                <div class="team-group-grid">
+                    @foreach (var team in group.Teams)
+                    {
+                        <a asp-page="/AllJerseys" asp-route-team="@team.Name" class="team-group-link" title="@team.Name">
+                            <img src="@team.FlagImage" alt="@team.Name flag" class="flag-img" />
+                            <span class="flag-name">@team.Name</span>
+                        </a>
+                    }
+                </div>
+            </div>
+        }
     </section>
 
     <section class="section-card legal-card">

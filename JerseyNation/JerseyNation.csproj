@@ -13,4 +13,9 @@
     <Content Include="Models\UpcomingMatch.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\docs\MANUAL.md" />
+    <None Include="wwwroot\docs\README.md" />
+  </ItemGroup>
+
 </Project>

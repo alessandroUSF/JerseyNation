@@ -1,0 +1,824 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/*My custom style*/
+
+body {
+    background: linear-gradient(180deg, #1f2428 0%, #2b3036 100%);
+    color: #d9fbe1;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.custom-navbar {
+    background-color: #111111 !important;
+    border-bottom: 1px solid #222 !important;
+}
+
+    .custom-navbar .navbar-brand,
+    .custom-navbar .navbar-brand:visited,
+    .custom-navbar .navbar-brand:focus {
+        color: #ffffff !important;
+        font-weight: 800;
+    }
+
+        .custom-navbar .navbar-brand:hover {
+            color: #57e389 !important;
+        }
+
+    .custom-navbar .nav-link,
+    .custom-navbar .nav-link:visited,
+    .custom-navbar .nav-link:focus {
+        color: #ffffff !important;
+        font-weight: 600;
+    }
+
+        .custom-navbar .nav-link:hover {
+            color: #57e389 !important;
+        }
+
+.brand-jn,
+.shop-toolbar-brand {
+    font-size: 1.95rem;
+    font-weight: 800;
+    color: #1f7a4d;
+    letter-spacing: 0.5px;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+
+.sizes-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.6rem;
+}
+
+.size-tag {
+    display: inline-block;
+    padding: 0.28rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+    .size-tag.unavailable {
+        color: #ff9b9b;
+        text-decoration: line-through;
+        border-color: rgba(255,107,107,0.35);
+        background: rgba(255,107,107,0.08);
+    }
+
+
+.menu-link {
+    color: #ffffff !important;
+    font-weight: 600;
+    margin-right: 0.6rem;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+    .menu-link:hover {
+        color: #57e389 !important;
+        border-bottom: 2px solid #57e389;
+    }
+.navbar-brand:hover {
+    color: #7bf1a8 !important;
+}
+
+.container main,
+.page-spacer,
+.section-card {
+    color: #e9f7ee;
+}
+
+.hero-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #57e389;
+    margin-bottom: 0.8rem;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: #d7e7db;
+    max-width: 850px;
+}
+
+.section-card {
+    background: rgba(33, 38, 43, 0.92);
+    border: 1px solid #3c444d;
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    margin-bottom: 1rem;
+}
+
+.search-box input,
+.form-control,
+.form-select {
+    background-color: #2b3036;
+    color: #f3fff6;
+    border: 1px solid #4c5864;
+}
+
+    .search-box input::placeholder,
+    .form-control::placeholder {
+        color: #a7b7ac;
+    }
+
+    .search-box input:focus,
+    .form-control:focus,
+    .form-select:focus {
+        background-color: #2b3036;
+        color: #ffffff;
+        border-color: #57e389;
+        box-shadow: 0 0 0 0.2rem rgba(87, 227, 137, 0.2);
+    }
+
+.btn-primary {
+    background-color: #57e389;
+    border-color: #57e389;
+    color: #162018;
+    font-weight: 700;
+}
+
+    .btn-primary:hover {
+        background-color: #45c972;
+        border-color: #45c972;
+        color: #101814;
+    }
+
+.btn-outline-primary {
+    color: #57e389;
+    border-color: #57e389;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #57e389;
+        border-color: #57e389;
+        color: #162018;
+    }
+
+.jersey-badge {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background-color: rgba(87, 227, 137, 0.12);
+    color: #7bf1a8;
+    border: 1px solid rgba(87, 227, 137, 0.35);
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.footer {
+    background-color: rgba(24, 28, 31, 0.95);
+    color: #aab8ad !important;
+}
+
+    .footer a {
+        color: #57e389 !important;
+    }
+
+h1 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    color: #57e389;
+}
+
+h2, h3, h4, h5 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #57e389;
+}
+
+p, li, label, span {
+    color: #e3efe7;
+}
+
+
+
+/* ===== Shop page ===== */
+
+.shop-toolbar {
+    background: linear-gradient(90deg, rgba(24, 28, 31, 0.96) 0%, rgba(38, 44, 49, 0.96) 100%);
+    border: 1px solid #394148;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.shop-toolbar-brand {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #1f7a4d;
+    letter-spacing: 0.5px;
+}
+
+.btn-explore {
+    background: linear-gradient(135deg, #1f7a4d, #2b995f);
+    border: none;
+    color: #ffffff;
+    font-weight: 800;
+    box-shadow: 0 10px 20px rgba(31,122,77,0.20);
+}
+
+.btn-explore:hover {
+        background: linear-gradient(135deg, #24955e, #33b06f);
+        color: #ffffff;
+    }
+
+.btn-cart {
+    background-color: #ffffff;
+    color: #111111;
+    border: none;
+    font-weight: 700;
+    position: relative;
+    padding-right: 2.8rem;
+}
+
+    .btn-cart:hover {
+        background-color: #ebf4ee;
+        color: #111111;
+    }
+
+.cart-count {
+    position: absolute;
+    top: 50%;
+    right: 0.7rem;
+    transform: translateY(-50%);
+    min-width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 999px;
+    background-color: #d62828;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-search-form input {
+    min-width: 260px;
+}
+
+.top-banner {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.top-banner-image {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    display: block;
+}
+
+.shop-page {
+    background: linear-gradient(rgba(16, 20, 24, 0.78), rgba(16, 20, 24, 0.78)), url('/images/background.png') center center / cover no-repeat;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.shop-hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: stretch;
+    gap: 1.25rem;
+    min-height: 460px;
+    padding: 0;
+    border-radius: 22px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.shop-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(3px);
+}
+
+.shop-hero-visual {
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(0,0,0,0.10), rgba(0,0,0,0.35)), url('/images/shop-hero.png') center center / cover no-repeat;
+    min-height: 360px;
+}
+
+.shop-hero h1 {
+    font-size: 3rem;
+    line-height: 1.05;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.shop-hero p {
+    font-size: 1.08rem;
+    color: #eef6f0;
+    width: 100%;
+}
+
+.hero-actions {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+}
+
+.shipping-outside {
+    text-align: center;
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: #8ff0b0;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(143,240,176,0.25);
+    border-radius: 999px;
+    padding: 0.85rem 1.2rem;
+}
+
+.shipping-highlight {
+    margin-top: 1.1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #9af7b9;
+    letter-spacing: 0.2px;
+}
+
+.hero-pill {
+    display: inline-block;
+    background-color: rgba(87, 227, 137, 0.18);
+    color: #9af7b9;
+    border: 1px solid rgba(87, 227, 137, 0.35);
+    border-radius: 999px;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 0.88rem;
+}
+
+.shipping-banner {
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.product-card h3,
+.mini-product h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+}
+
+.product-card-top {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+}
+
+.product-flag {
+    font-size: 1.5rem;
+}
+
+.product-team {
+    font-weight: 700;
+    color: #9af7b9;
+}
+
+.product-meta {
+    color: #c8d6cc;
+    font-size: 0.95rem;
+}
+.product-image-link {
+    text-decoration: none;
+    display: block;
+}
+
+.product-image-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 510 / 587;
+    background: linear-gradient(180deg, #f3f3f3, #e8e8e8);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.18s ease;
+    transform-origin: var(--zoom-x, 50%) var(--zoom-y, 50%);
+}
+
+.product-image-frame:hover .jersey-zoom {
+    transform: scale(1.9);
+    cursor: zoom-in;
+}
+
+
+.image-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.product-image-frame:hover .image-nav {
+    opacity: 1;
+}
+
+.image-nav:hover {
+    background: rgba(31, 122, 77, 0.9);
+}
+
+.prev-image {
+    left: 10px;
+}
+
+.next-image {
+    right: 10px;
+}
+
+
+.btn-plus {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #57e389, #2fb56b);
+    color: #0b1410;
+    font-size: 1.4rem;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 18px rgba(87, 227, 137, 0.22);
+}
+
+.btn-plus:hover {
+        transform: translateY(-1px);
+        background: linear-gradient(135deg, #6ef09b, #38c978);
+        color: #08110d;
+    }
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.mini-product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+}
+
+.game-card {
+    text-align: center;
+}
+
+.game-teams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.game-team-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    min-width: 110px;
+}
+
+.match-flag-img {
+    width: 72px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.18);
+    margin-bottom: 0.45rem;
+}
+
+.match-team-name {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.match-details {
+    font-size: 0.85rem;
+    color: #d6e1d9;
+    margin-bottom: 0.35rem;
+    text-align: center;
+}
+
+.game-vs {
+    color: #9fb0a2;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .match-flag-img {
+        width: 60px;
+        height: 40px;
+    }
+
+    .match-team-name {
+        font-size: 0.85rem;
+    }
+
+    .game-teams {
+        gap: 0.75rem;
+    }
+}
+
+.game-team-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+    .game-team-link:hover {
+        color: #57e389;
+    }
+
+.game-vs {
+    color: #9fb0a2;
+    font-weight: 700;
+}
+
+.receive-badge {
+    display: inline-block;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    background-color: rgba(87, 227, 137, 0.12);
+    color: #9af7b9;
+    border: 1px solid rgba(87, 227, 137, 0.35);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.special-product {
+    border: 1px solid rgba(255, 215, 0, 0.35);
+}
+
+.flag-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.flag-link {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    text-decoration: none;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid #3c444d;
+    padding: 0.55rem 0.8rem;
+    border-radius: 999px;
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+    .flag-link:hover {
+        color: #57e389;
+        border-color: #57e389;
+        transform: translateY(-1px);
+    }
+
+.flag-icon {
+    font-size: 1.1rem;
+}
+
+.flag-name {
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.flag-img {
+    width: 22px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.18);
+}
+
+.legal-card p {
+    color: #d8e3db;
+}
+
+@media (max-width: 768px) {
+    .shop-hero {
+        min-height: 360px;
+        padding: 1.5rem;
+    }
+
+        .shop-hero h1 {
+            font-size: 2rem;
+        }
+
+    .shop-search-form {
+        width: 100%;
+    }
+
+        .shop-search-form input {
+            min-width: 0;
+            width: 100%;
+        }
+}
+
+
+/* Promotional Prices*/
+
+.old-price {
+    color: #ff6b6b;
+    text-decoration: line-through;
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.new-price {
+    color: #57e389;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.regular-price {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.promo-badge {
+    display: inline-block;
+    padding: 0.25rem 0.55rem;
+    border-radius: 999px;
+    background-color: rgba(255, 107, 107, 0.15);
+    color: #ff8b8b;
+    border: 1px solid rgba(255, 107, 107, 0.35);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.goalkeeper-flag {
+    display: inline-block;
+    margin-top: 0.45rem;
+    padding: 0.28rem 0.55rem;
+    border-radius: 999px;
+    background-color: rgba(80, 180, 255, 0.12);
+    color: #8fd3ff;
+    border: 1px solid rgba(80, 180, 255, 0.35);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+#dailyPerformanceChart,
+#teamPerformanceChart,
+#marketingPerformanceChart {
+    width: 100% !important;
+    min-height: 360px;
+}
+
+.team-group-title {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-bottom: 0.9rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    padding-bottom: 0.25rem;
+}
+
+.team-group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.65rem 1.4rem;
+}
+
+.team-group-link {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    text-decoration: none;
+    color: #dfe9e2;
+    padding: 0.15rem 0;
+}
+
+.team-group-link:hover {
+    color: #9af7b9;
+    text-decoration: none;
+}
+
+.team-group-link .flag-img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.team-group-link .flag-name::before {
+    content: "  ";
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+
+
+.crud-card {
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .crud-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .crud-card h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .crud-card p {
+        margin-bottom: 0;
+    }
+
+.crud-table th,
+.crud-table td {
+    vertical-align: middle;
+}

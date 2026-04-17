@@ -1,0 +1,19 @@
+﻿@page
+@model AllJerseysModel
+@{
+    ViewData["Title"] = "All Jerseys";
+}
+
+<div class="section-card">
+    <h1>All Jerseys</h1>
+    <p>
+        This page would display the complete jersey catalog with filter options on the left side.
+    </p>
+    <p>
+        Available filters would include size, color, price range, special jersey, jersey type, goalkeeper jersey,
+        signed items, rare items, audience, and promotions.
+    </p>
+    <p>
+        <em>@Model.CurrentFilterMessage</em>
+    </p>
+</div>

@@ -1,0 +1,123 @@
+﻿@page
+@model JerseyNation.Pages.AboutModel
+@{
+    ViewData["Title"] = "About Us";
+}
+
+<section class="container py-5">
+    <div class="row mb-4">
+        <div class="col-lg-10 mx-auto text-center">
+            <h1 class="fw-bold">About Us</h1>
+            <p class="lead">
+                JerseyNation is an individual academic project developed for the USF Application Development course.
+                The website was created as a World Cup 2026 jersey store prototype that combines e-commerce structure,
+                administrative functionality, data visualization, and personalized recommendations.
+            </p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h3 class="card-title mb-3">Student Information</h3>
+                    <p><strong>Student:</strong> Alessandro Luiz Sica de Almeida</p>
+                    <p><strong>Role:</strong> Project Developer and Designer</p>
+                    <p>
+                        <strong>Contributions:</strong> Alessandro was responsible for the full project, including concept development,
+                        interface design, product catalog structure, recommendation logic, data visualization, CRUD navigation,
+                        documentation, and overall website implementation.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h3 class="card-title mb-3">Background and Experience</h3>
+                    <p>
+                        I first studied HTML in 1996 and later earned a degree in Advertising. At that time, I created many web pages,
+                        which gave me early exposure to website design and digital communication.
+                    </p>
+                    <p>
+                        Over the years, I also worked with tools such as HotDog for HTML pages, Drumbeat for e-commerce projects,
+                        and Macromedia Flash for dynamic web experiences.
+                    </p>
+                    <p>
+                        Later, I managed large technology teams responsible for building many digital projects, so even when I was no
+                        longer directly coding pages myself, I continued to stay close to web development and programming environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title mb-3">About the Project</h3>
+                    <p>
+                        JerseyNation simulates an online store focused on national team jerseys related to the 2026 World Cup.
+                        The system includes a homepage, shop page, personalized recommendations, product details, cart,
+                        data visualization dashboards, and an administrative CRUD area for jersey management.
+                    </p>
+                    <p>
+                        Although the current version uses dummy data and in-memory structures, the intended production version
+                        would use a full relational database and a more complete e-commerce architecture.
+                    </p>
+                    <p>
+                        Although the original structure may have been discussed in a broader academic context, this final version
+                        became an individual project, and all parts of the current implementation were completed by
+                        Alessandro Luiz Sica de Almeida.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title mb-3">Logical Data Model</h3>
+                    <p>
+                        The logical data model below represents the intended database structure for a future production version
+                        of JerseyNation. The current prototype uses simplified data structures, but a real implementation would
+                        use a database with entities such as customers, orders, order items, jerseys, teams, and audit logs.
+                    </p>
+                    <p>
+                        The model includes multiple one-to-many relationships, such as Customer to Order,
+                        Order to OrderItem, Team to Jersey, and Jersey to OrderItem.
+                    </p>
+
+                    <div class="text-center my-4">
+                        <img src="~/images/data-model/jerseynation-logical-model.png"
+                             alt="JerseyNation Logical Data Model"
+                             class="img-fluid rounded shadow-sm border" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title mb-3">Useful Links</h3>
+                    <ul class="mb-0">
+                        <li><a href="https://github.com/your-username/your-repository" target="_blank">GitHub Repository</a></li>
+                        <li><a href="/README.md" target="_blank">README</a></li>
+                        <li><a href="/MANUAL.md" target="_blank">Manual</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="text-center pt-2">
+                <a asp-page="/Index" class="btn btn-outline-dark m-1">Home</a>
+                <a asp-page="/Shop" class="btn btn-outline-dark m-1">Shop</a>
+                <a asp-page="/Charts" class="btn btn-outline-dark m-1">Data Visualization</a>
+                <a asp-page="/CRUD" class="btn btn-outline-dark m-1">CRUD Navigation</a>
+                <a asp-page="/Privacy" class="btn btn-outline-dark m-1">Privacy</a>
+            </div>
+        </div>
+    </div>
+</section>

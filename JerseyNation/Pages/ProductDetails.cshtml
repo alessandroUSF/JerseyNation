@@ -19,4 +19,45 @@
     <p>
         <em>@Model.ProductMessage</em>
     </p>
+
+    <div class="mt-4 d-flex gap-2 flex-wrap">
+        <button type="button"
+                class="btn btn-primary"
+                id="addToCartTestBtn"
+                data-product-id="@Model.ProductId"
+                data-product-name="@Model.ProductName">
+            Add to Cart
+        </button>
+        <a class="btn btn-outline-light" asp-page="/Shop">Back to Shop</a>
+    </div>
 </div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const addBtn = document.getElementById("addToCartTestBtn");
+            if (!addBtn) return;
+
+            addBtn.addEventListener("click", function () {
+                const currentCount = parseInt(localStorage.getItem("cartCount") || "0", 10);
+                const newCount = currentCount + 1;
+
+                const productId = addBtn.dataset.productId || "N/A";
+                const productName = addBtn.dataset.productName || "Selected Jersey";
+
+                localStorage.setItem("cartCount", newCount.toString());
+
+                const cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
+                cartItems.push({
+                    id: productId,
+                    name: productName,
+                    quantity: 1
+                });
+
+                localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+                window.location.href = '@Url.Page("/Shop")';
+            });
+        });
+    </script>
+}
