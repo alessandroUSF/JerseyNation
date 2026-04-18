@@ -1,11 +1,10 @@
-
 # Jersey Nation – User Manual
 
 ---
 
 ## 📌 Overview
 
-Jersey Nation is an e-commerce simulation platform for national soccer team jerseys, combining shopping functionality, analytics, and behavioral tracking.
+Jersey Nation is an e-commerce simulation platform for national soccer team jerseys, combining shopping functionality, data analytics, and AI chatbot interaction.
 
 ---
 
@@ -13,152 +12,155 @@ Jersey Nation is an e-commerce simulation platform for national soccer team jers
 
 Main sections:
 
-- Home
-- Shop
-- Charts
-- API
-- Data Dictionary
-- CRUD Navigation
-- About
-- Privacy
+- Home  
+- Shop  
+- Charts (Data Visualization)  
+- ChatBots  
+- API  
+- Data Dictionary  
+- CRUD Navigation  
+- About  
 
 ---
 
 ## 🛍️ Shop
 
 Users can:
-- Browse products
-- Search for items
-- View promotions and discounts
-- Access product details
-
----
-
-## 🔍 Search
-
-- Allows users to quickly find products
-- Works across product names and attributes
+- Browse products  
+- Search for items  
+- View promotions and discounts  
+- Access product details  
 
 ---
 
 ## 📦 Product Details
 
 Users can:
-- Select available sizes
-- Choose quantity
-- View pricing and discounts
-- Add items to cart
+- Select sizes  
+- Choose quantity  
+- View pricing and discounts  
+- Add items to cart  
+
+Pelé chatbot is available to assist users in product selection.
+
+---
+
+## 🤖 ChatBots
+
+### Pelé – Customer Assistant
+- Helps users find jerseys  
+- Provides recommendations  
+- Explains product features  
+
+### Maradona – Admin & Data Assistant
+- Explains system structure  
+- Interprets data and charts  
+- Supports CRUD and administrative pages  
+
+---
+
+## 📊 Data Visualization
+
+Features:
+- Interactive charts  
+- Dynamic filters (daily, weekly, monthly)  
+- Hover interactions and tooltips  
+- Country-based analysis with flags  
+
+Charts available:
+1. Sales & Revenue  
+2. Team Performance  
+3. Sales Distribution  
 
 ---
 
 ## ⚽ Next Matches
 
-- Displays upcoming games
-- Suggests jerseys based on teams playing
-- Direct navigation to related products
-
----
-
-## 📊 Charts
-
-### Features:
-- Interactive charts
-- Clickable flags and labels
-- Real-time visual feedback
-
-Charts available:
-1. Sales & Revenue
-2. Team Performance
-3. Sales Distribution
+- Displays upcoming games  
+- Suggests jerseys  
+- Links directly to products  
 
 ---
 
 ## 🧠 Behavior Tracking
 
-- Uses cookies to track:
-  - User clicks
-  - Navigation patterns
-  - Product interest
-- Enables future recommendation systems
+Tracks:
+- Clicks  
+- Navigation  
+- Product interest  
+
+Supports future personalization.
 
 ---
 
 ## 🔌 API Page
 
-- Displays available endpoints
-- Provides structured access to system data
-- Supports future integrations
+- Displays endpoints  
+- Explains integration structure  
+- Supports future data expansion  
 
 ---
 
 ## 📘 Data Dictionary
 
-- Detailed description of all tables and attributes
-- Linked with ERD for navigation
+- Describes all tables and attributes  
+- Linked with ERD  
 
 ---
 
 ## 🧱 ERD
 
-- Organized by functional groups
-- Interactive features:
-  - Mouseover → summary
-  - Click → detailed view in Data Dictionary
+- Organized by functional groups  
+- Interactive navigation  
 
 ---
 
 ## ⚙️ CRUD Navigation
 
-- Centralized access to entity management
-- Designed for administrative and testing purposes
+- Simulated operations:
+  - Create  
+  - Read  
+  - Update  
+  - Delete  
+
+Maradona chatbot supports these pages.
 
 ---
 
 ## ⚙️ Technical Notes
 
-- ASP.NET Core Razor Pages
-- Chart.js for visualization
-- Bootstrap for layout
-- JavaScript for interactivity
+- Initially developed with Razor Pages (C#)  
+- Converted to static HTML/JS  
+- Uses Chart.js for visualization  
+- Uses Botpress for AI chatbots  
 
 ---
 
 ## 🔄 Version
 
-**Version: 1.1.0**
+Version: 2.0.0  
 
 ---
 
 ## 📌 Update Notes
 
-- Added API page
-- Added Data Dictionary
-- Implemented dynamic ERD with interactive features
-- Added CRUD Navigation
-- Implemented search functionality
-- Added Next Matches feature
-- Implemented cookie-based tracking system
-- Improved charts interactivity and scaling
-- UI/UX refinements
-
----
-
-## ⏳ Pending
-
-- Chatbot integration
+- Added ChatBots (Pelé and Maradona)  
+- Integrated chatbots into multiple pages  
+- Improved charts and filters  
+- Converted project to static format  
+- Improved UI/UX consistency  
 
 ---
 
 ## 🧩 Known Limitations
 
-- Cart is not fully persistent
-- No real payment processing
-- Static dataset for analytics
+- Static data (no live API yet)  
+- Simulated CRUD operations  
+- No real checkout system  
 
 ---
 
 ## 📞 Support
 
-Alessandro Almeida  
-alessandroalmeida@usf.edu
+Alessandro Luiz Sica de Almeida  
 University of South Florida

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<title>ERD - JerseyNation</title>
+<link rel="stylesheet" href="css/erd.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark border-bottom box-shadow mb-3 custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">JerseyNation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="mainNav">
+        <ul class="navbar-nav flex-grow-1">
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="charts.html">Charts</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="crud.html">CRUD Navigation</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="erd.html">ERD</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="api-details.html">API</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container">
+<main role="main" class="pb-3">
+
+<section class="section-card mb-4">
+    <h1 class="hero-title mb-3">ERD Diagram</h1>
+
+    <p class="hero-subtitle mb-3">
+        This page presents the ERD Diagram as an interactive image and the related Data Dictionary.
+        Even for a relatively small website, many tables are needed to support proper data control,
+        operational consistency, and secure administration. For that reason, the ERD was organized in
+        business blocks. The top diagram provides the high-level interactive image, while the details of
+        each block are presented below together with the Data Dictionary.
+    </p>
+
+    <div class="jn-erd-toolbar justify-content-center mt-3">
+        <a class="btn btn-primary" href="#data-dictionary-section">Data Dictionary</a>
+        <a class="btn btn-outline-light" href="api-details.html">API Details</a>
+    </div>
+</section>
+
+<section class="diagram-card">
+
+    <h2 class="diagram-title">Business-block ERD View</h2>
+    <p class="diagram-text">
+        The ERD is presented as an interactive image organized by business blocks. This structure improves readability
+        and makes it easier to understand the relationships among domains such as customer, order, catalog, shipping,
+        payment, supplier, administration, and marketing. The detailed description of each block and its related
+        Data Dictionary are presented below.
+    </p>
+    <p class="hint">
+        Hover a block to preview richer table detail. Click a block or use the button below to navigate to the
+        corresponding block description and Data Dictionary section.
+    </p>
+
+<div class="diagram" id="diagram">
+<svg class="svg-layer" id="svgLayer"></svg>
+<div class="diagram-grid">
+<div class="title-card"><div><h2>JerseyNation<br>ERD Diagram</h2><p>Business-domain view with PK/FK connectors</p></div></div>
+
+<article class="block admin" data-id="admin"><div class="badge" style="background:var(--admin)">AD</div><h3>Administration & Governance</h3><p>Internal users, permissions, auditability, and system control.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">UserID</span></div><div class="field-chip"><span class="pill pk">PK</span><span class="name">PermissionID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">UpdatedByUserID → Order</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini">No mandatory external API</span></div><div class="tooltip" id="tt-admin"></div></article>
+
+<article class="block supplier" data-id="supplier"><div class="badge" style="background:var(--supplier)">SU</div><h3>Supplier & Procurement</h3><p>Supplier records, purchase orders, and inbound inventory flow.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">SupplierID</span></div><div class="field-chip"><span class="pill pk">PK</span><span class="name">SupplierOrderID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">ProductID → Catalog</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini api">Supplier / EDI API</span><span class="mini api">Inventory Sync API</span></div><div class="tooltip" id="tt-supplier"></div></article>
+
+<article class="block customer" data-id="customer"><div class="badge" style="background:var(--customer)">CU</div><h3>Customer Block</h3><p>Identity, addresses, preferences, and pre-purchase customer data.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">CustomerID</span></div><div class="field-chip"><span class="pill pk">PK</span><span class="name">CustomerAddressID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">CustomerID → Order</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini">No mandatory external API</span></div><div class="tooltip" id="tt-customer"></div></article>
+
+<article class="block central order" data-id="order"><div class="hub">Central hub</div><div class="badge" style="background:var(--order)">OR</div><h3>Order Block</h3><p>Core transaction engine linking customer, catalog, payment, and shipping.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">OrderID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">CustomerID → Customer</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">ProductID → Catalog</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">PaymentMethodID / ShippingMethodID</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini api">Fraud / Risk API</span><span class="mini api">Tax Calculation API</span></div><div class="connector-note">Core references: CustomerID, ProductID, BillingAddressID, ShippingAddressID, PaymentMethodID, ShippingMethodID.</div><div class="tooltip" id="tt-order"></div></article>
+
+<article class="block catalog" data-id="catalog"><div class="badge" style="background:var(--catalog)">PC</div><h3>Product Catalog</h3><p>Products, categories, teams, stock, and product media.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">ProductID</span></div><div class="field-chip"><span class="pill pk">PK</span><span class="name">CategoryID / TeamID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">SupplierID → Supplier</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini">No mandatory external API</span></div><div class="tooltip" id="tt-catalog"></div></article>
+
+<article class="block marketing" data-id="marketing"><div class="badge" style="background:var(--marketing)">MK</div><h3>Marketing Block</h3><p>Campaigns, promotions, coupons, featured matches, and customer engagement.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">CampaignID</span></div><div class="field-chip"><span class="pill pk">PK</span><span class="name">PromotionID / CouponID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">CouponID / OrderID</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini api">Email / CRM API</span><span class="mini api">Recommendation API</span><span class="mini api">Analytics API</span></div><div class="tooltip" id="tt-marketing"></div></article>
+
+<article class="block payment" data-id="payment"><div class="badge" style="background:var(--payment)">PA</div><h3>Payment Block</h3><p>Payment methods, gateway transactions, and refunds.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">PaymentID / PaymentMethodID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">OrderID → Order</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">PaymentID → PaymentTransaction</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini api">Payment Gateway API</span></div><div class="tooltip" id="tt-payment"></div></article>
+
+<article class="block shipping" data-id="shipping"><div class="badge" style="background:var(--shipping)">SH</div><h3>Shipping & Delivery</h3><p>Shipping methods, rates, carrier tracking, and delivery execution.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">ShippingMethodID</span></div><div class="field-chip"><span class="pill pk">PK</span><span class="name">ShipmentID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">OrderID → Order</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini api">Shipping Rate API</span><span class="mini api">Carrier Tracking API</span><span class="mini api">Address Validation API</span></div><div class="tooltip" id="tt-shipping"></div></article>
+</div></div></section>
+
+<section class="navigate-card mb-4" id="data-dictionary-section">
+<div class="card block-nav-card">
+  <h2 class="mb-3">Navigate by Block</h2>
+  <div class="block-nav-grid">
+    <button type="button" class="btn btn-primary block-nav-btn active" data-block-nav="order">Order</button>
+    <button type="button" class="btn btn-outline-primary block-nav-btn" data-block-nav="customer">Customer</button>
+    <button type="button" class="btn btn-outline-primary block-nav-btn" data-block-nav="catalog">Product Catalog</button>
+    <button type="button" class="btn btn-outline-primary block-nav-btn" data-block-nav="payment">Payment</button>
+    <button type="button" class="btn btn-outline-primary block-nav-btn" data-block-nav="shipping">Shipping</button>
+    <button type="button" class="btn btn-outline-primary block-nav-btn" data-block-nav="marketing">Marketing</button>
+    <button type="button" class="btn btn-outline-primary block-nav-btn" data-block-nav="supplier">Supplier</button>
+    <button type="button" class="btn btn-outline-primary block-nav-btn" data-block-nav="admin">Administration</button>
+  </div>
+</div>
+</section>
+
+<section class="detail" id="detailPanelAnchor">
+<div class="card"><h2 id="detailTitle">Order Block</h2><p class="desc" id="detailDesc"></p><div class="subhead">Main tables and key fields</div><div class="table-list" id="tableList"></div></div>
+<div class="card"><div class="subhead" style="margin-top:0">Main relationships</div><ul class="list" id="relationshipList"></ul><div class="subhead">Connected APIs</div><ul class="list" id="apiList"></ul><div class="subhead">Design note</div><p class="desc" id="presentationNote"></p></div>
+</section>
+
+<div class="erd-note-card">
+    This ERD Diagram was organized by business blocks to improve readability and to make the data structure easier
+    to understand. The interactive image highlights the main domains of the system, while the detailed explanation
+    and the Data Dictionary below provide a more complete technical view of each block, its tables, and key fields.
+</div>
+
+
+
+
+
+
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/04/18/01/20260418012507-E6EQ81S1.js" defer></script>
+
+</main>
+</div>
+
+<footer class="border-top footer text-muted">
+  <div class="container">
+    &copy; 2026 - JerseyNation - <a href="privacy.html">Privacy</a>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/site.js"></script>
+<script src="js/erd.js"></script>
+</body>
+</html>

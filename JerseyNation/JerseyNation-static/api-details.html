@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<title>API Details - JerseyNation</title>
+<link rel="stylesheet" href="css/erd.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark border-bottom box-shadow mb-3 custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">JerseyNation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="mainNav">
+        <ul class="navbar-nav flex-grow-1">
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="charts.html">Charts</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="crud.html">CRUD Navigation</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="erd.html">ERD</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="api-details.html">API</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container">
+<main role="main" class="pb-3">
+
+<div class="jn-erd-page api-details-page">
+<main class="wrap">
+<section class="section-card jn-page-header mb-4"><h1 class="mb-3">API Details</h1><p class="mb-0">Technical integration scope for the external services referenced in the ERD and Data Dictionary.</p></section>
+<section class="jn-erd-toolbar mb-3">
+    <a class="btn btn-outline-light" href="about.html">About</a>
+    <a class="btn btn-primary" href="erd.html">Open ERD</a>
+</section>
+
+<section class="section-card mb-4">
+  <div class="jn-meta-title"><h4 class="section-title">Integration Scope</h4></div>
+            <div>
+                <p>
+                The APIs listed below represent expected integrations necessary to support core business operations such as payments, shipping, taxation, and fraud detection.
+                While these services are not yet implemented, the platform architecture has been designed to accommodate these integrations seamlessly in future versions.
+            </p>
+            </div>
+</section>
+
+<section class="detail api-detail-grid">
+  <div class="card">
+    <h2 class="jn-section-title">Transactional and Operational APIs</h2>
+    <div class="table-list">
+      <div class="tbl">
+        <div class="tbl-h"><strong>Payment Gateway API</strong><div>Processes payment authorization, capture, status callbacks, and refunds.</div></div>
+        <div class="fields">
+          <div class="field"><strong>Connection type:</strong> Server-to-server REST integration over HTTPS</div>
+          <div class="field"><strong>Typical methods:</strong> POST for authorize/capture/refund and GET for transaction lookup</div>
+          <div class="field"><strong>Data format:</strong> JSON request and response payloads</div>
+          <div class="field"><strong>Authentication:</strong> API key, secret token, or signed webhook validation</div>
+          <div class="field"><strong>Used by:</strong> Payment block</div>
+          <div class="field"><strong>Technical note:</strong> Usually supports synchronous responses for checkout and asynchronous webhooks for status updates.</div>
+        </div>
+      </div>
+
+      <div class="tbl">
+        <div class="tbl-h"><strong>Fraud / Risk API</strong><div>Evaluates risk signals before or during payment authorization.</div></div>
+        <div class="fields">
+          <div class="field"><strong>Connection type:</strong> Real-time REST scoring service</div>
+          <div class="field"><strong>Typical methods:</strong> POST risk-evaluation request at checkout</div>
+          <div class="field"><strong>Data format:</strong> JSON with order amount, device, address, customer, and behavioral signals</div>
+          <div class="field"><strong>Authentication:</strong> API token or private service credential</div>
+          <div class="field"><strong>Used by:</strong> Order block</div>
+          <div class="field"><strong>Technical note:</strong> Common output includes risk score, decision flags, reason codes, and manual-review recommendation.</div>
+        </div>
+      </div>
+
+      <div class="tbl">
+        <div class="tbl-h"><strong>Tax Calculation API</strong><div>Calculates taxes based on jurisdiction, product type, and destination.</div></div>
+        <div class="fields">
+          <div class="field"><strong>Connection type:</strong> Server-side REST service</div>
+          <div class="field"><strong>Typical methods:</strong> POST tax quote before order confirmation</div>
+          <div class="field"><strong>Data format:</strong> JSON with line items, origin, destination, and taxable amounts</div>
+          <div class="field"><strong>Authentication:</strong> API key or account token</div>
+          <div class="field"><strong>Used by:</strong> Order block</div>
+          <div class="field"><strong>Technical note:</strong> Often returns item-level and order-level tax breakdowns for auditability and invoicing.</div>
+        </div>
+      </div>
+
+      <div class="tbl">
+        <div class="tbl-h"><strong>Shipping Rate API</strong><div>Quotes freight methods, service levels, and estimated delivery windows.</div></div>
+        <div class="fields">
+          <div class="field"><strong>Connection type:</strong> REST integration with carrier or shipping aggregator</div>
+          <div class="field"><strong>Typical methods:</strong> POST shipment quote request and GET service lookup</div>
+          <div class="field"><strong>Data format:</strong> JSON with destination, parcel dimensions, weight, and service preferences</div>
+          <div class="field"><strong>Authentication:</strong> API key or carrier account credential</div>
+          <div class="field"><strong>Used by:</strong> Shipping block</div>
+          <div class="field"><strong>Technical note:</strong> Usually returns service code, rate, estimated days, and carrier metadata for checkout display.</div>
+        </div>
+      </div>
+
+      <div class="tbl">
+        <div class="tbl-h"><strong>Carrier Tracking API</strong><div>Retrieves shipment milestones and delivery status events after dispatch.</div></div>
+        <div class="fields">
+          <div class="field"><strong>Connection type:</strong> Polling API and, in some cases, webhook/event subscription</div>
+          <div class="field"><strong>Typical methods:</strong> GET tracking status by tracking number or shipment reference</div>
+          <div class="field"><strong>Data format:</strong> JSON or XML depending on carrier</div>
+          <div class="field"><strong>Authentication:</strong> Carrier token, account key, or signed callback</div>
+          <div class="field"><strong>Used by:</strong> Shipping block</div>
+          <div class="field"><strong>Technical note:</strong> Tracking events are often normalized internally into shipment milestones for consistent UI and reporting.</div>
+        </div>
+      </div>
+
+      <div class="tbl">
+        <div class="tbl-h"><strong>Address Validation API</strong><div>Validates formatting, completeness, and deliverability of shipping addresses.</div></div>
+        <div class="fields">
+          <div class="field"><strong>Connection type:</strong> Real-time REST validation service</div>
+          <div class="field"><strong>Typical methods:</strong> POST address-validation request before shipment creation</div>
+          <div class="field"><strong>Data format:</strong> JSON address object with normalized response fields</div>
+          <div class="field"><strong>Authentication:</strong> API key</div>
+          <div class="field"><strong>Used by:</strong> Shipping block</div>
+          <div class="field"><strong>Technical note:</strong> Common outputs include normalized address lines, confidence score, and deliverability recommendations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="jn-section-title">Commercial and Support APIs</h2>
+    <div class="table-list">
+      <div class="tbl">
+        <div class="tbl-h"><strong>Supplier / EDI API</strong><div>Exchanges purchase orders, acknowledgements, catalog changes, and fulfillment signals with suppliers.</div></div>
+        <div class="fields">
+          <div class="field"><strong>Connection type:</strong> REST, file-based integration, or EDI channel depending on supplier maturity</div>
+          <div class="field"><strong>Typical methods:</strong> POST purchase orders, GET acknowledgements, or scheduled batch exchange</div>
+          <div class="field"><strong>Data format:</strong> JSON, CSV, XML, or EDI documents such as ANSI X12 / EDIFACT</div>
+          <div class="field"><strong>Authentication:</strong> Token, SFTP credential, VPN, or partner certificate</div>
+          <div class="field"><strong>Used by:</strong> Supplier block</div>
+          <div class="field"><strong>Technical note:</strong> Integration design often requires idempotency, document tracking, and reconciliation for procurement events.</div>
+        </div>
+      </div>
+
+      <div class="tbl">
+        <div class="tbl-h"><strong>Inventory Sync API</strong><div>Synchronizes available quantity, reserved stock, and supplier-side availability.</div></div>
+        <div class="fields">
+          <div class="field"><strong>Connection type:</strong> Scheduled REST synchronization or event-driven inventory updates</div>
+          <div class="field"><strong>Typical methods:</strong> GET stock feed, POST stock adjustment, or webhook ingestion</div>
+          <div class="field"><strong>Data format:</strong> JSON inventory records keyed by SKU or product identifier</div>
+          <div class="field"><strong>Authentication:</strong> Token-based service authentication</div>
+          <div class="field"><strong>Used by:</strong> Supplier block</div>
+          <div class="field"><strong>Technical note:</strong> Usually requires timestamped updates and conflict rules to avoid stale stock levels across systems.</div>
+        </div>
+      </div>
+
+      <div class="tbl">
+        <div class="tbl-h"><strong>Email / CRM API</strong><div>Supports customer communication, lifecycle triggers, and campaign delivery.</div></div>
+        <div class="fields">
+          <div class="field"><strong>Connection type:</strong> REST messaging or CRM automation platform integration</div>
+          <div class="field"><strong>Typical methods:</strong> POST campaign event, POST transactional email, GET delivery status</div>
+          <div class="field"><strong>Data format:</strong> JSON with customer profile, segmentation attributes, and campaign metadata</div>
+          <div class="field"><strong>Authentication:</strong> API token or OAuth 2.0</div>
+          <div class="field"><strong>Used by:</strong> Marketing block</div>
+          <div class="field"><strong>Technical note:</strong> Often integrates with templates, event triggers, suppression lists, and campaign performance feedback.</div>
+        </div>
+      </div>
+
+      <div class="tbl">
+        <div class="tbl-h"><strong>Recommendation API</strong><div>Supports personalization and product suggestions based on customer behavior and product signals.</div></div>
+        <div class="fields">
+          <div class="field"><strong>Connection type:</strong> REST inference service or internal model-serving endpoint</div>
+          <div class="field"><strong>Typical methods:</strong> POST context request and GET ranked recommendation list</div>
+          <div class="field"><strong>Data format:</strong> JSON with customer context, product context, and returned recommendation scores</div>
+          <div class="field"><strong>Authentication:</strong> Service token or internal gateway credential</div>
+          <div class="field"><strong>Used by:</strong> Marketing block</div>
+          <div class="field"><strong>Technical note:</strong> May operate in real time for page rendering or in batch mode for campaigns and audience segments.</div>
+        </div>
+      </div>
+
+      <div class="tbl">
+        <div class="tbl-h"><strong>Analytics API</strong><div>Collects product-view, campaign, and conversion events for reporting and performance analysis.</div></div>
+        <div class="fields">
+          <div class="field"><strong>Connection type:</strong> Event collection endpoint, measurement API, or streaming ingestion service</div>
+          <div class="field"><strong>Typical methods:</strong> POST event payloads and batch export ingestion</div>
+          <div class="field"><strong>Data format:</strong> JSON event schema with timestamp, session, customer, and business attributes</div>
+          <div class="field"><strong>Authentication:</strong> Measurement token, service key, or signed ingestion request</div>
+          <div class="field"><strong>Used by:</strong> Marketing block</div>
+          <div class="field"><strong>Technical note:</strong> A consistent event schema is critical to keep dashboards, attribution, and conversion metrics reliable.</div>
+        </div>
+      </div>
+
+      <div class="tbl">
+        <div class="tbl-h"><strong>No Mandatory External API</strong><div>Some business domains remain internally managed in the current logical model.</div></div>
+        <div class="fields">
+          <div class="field"><strong>Applies to:</strong> Customer, Product Catalog, and Administration areas</div>
+          <div class="field"><strong>Connection type:</strong> Internal application services and direct database-backed workflows</div>
+          <div class="field"><strong>Technical note:</strong> These domains can remain modular and still support future integration through adapters, service abstractions, or internal APIs if platform complexity grows.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="footer section-card">These API descriptions extend the ERD by documenting the expected integration style, transport pattern, payload characteristics, and operational role of each external service in the JerseyNation logical architecture.</div>
+</main>
+</div>
+
+
+
+
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/04/18/01/20260418012507-E6EQ81S1.js" defer></script>
+
+</main>
+</div>
+
+<footer class="border-top footer text-muted">
+  <div class="container">
+    &copy; 2026 - JerseyNation - <a href="privacy.html">Privacy</a>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

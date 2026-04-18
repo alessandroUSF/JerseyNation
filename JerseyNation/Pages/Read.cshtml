@@ -1,16 +1,27 @@
 ﻿@page
+@using System.Globalization
 @model ReadModel
 @{
     ViewData["Title"] = "Read Jerseys";
 }
 
-<div class="page-spacer">
-    <section class="section-card mb-4">
+<div class="section-card mb-4">
+    @if (Model.Mode == "update")
+    {
+        <h1>Choose a Jersey to Update</h1>
+        <p>Select a jersey below to open the update form.</p>
+    }
+    else if (Model.Mode == "delete")
+    {
+        <h1>Choose a Jersey to Delete</h1>
+        <p>Select a jersey below to open the delete confirmation page.</p>
+    }
+    else
+    {
         <h1>Read Jerseys</h1>
-        <p>
-            This page displays the current jersey catalog and provides shortcuts for update and delete operations.
-        </p>
-    </section>
+        <p>Browse the current jersey catalog.</p>
+    }
+</div>
 
     <section class="section-card">
         <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
@@ -43,11 +54,24 @@
                             <td>@item.JerseyType</td>
                             <td>@item.Audience</td>
                             <td>@item.Color</td>
-                            <td>$@item.SalePrice.ToString("0.00")</td>
+                            <td>$@item.SalePrice.ToString("N2", CultureInfo.GetCultureInfo("en-US"))</td>
                             <td>@(item.IsPromotion ? "Yes" : "No")</td>
-                            <td class="d-flex gap-2">
-                                <a asp-page="/Update" asp-route-id="@item.Id" class="btn btn-sm btn-outline-light">Update</a>
-                                <a asp-page="/Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                            <td class="crud-actions-cell">
+                                <div class="crud-actions">
+                                    @if (Model.Mode == "update")
+                                    {
+                                        <a asp-page="/Update" asp-route-id="@item.Id" class="btn btn-sm btn-outline-light">Update</a>
+                                    }
+                                    else if (Model.Mode == "delete")
+                                    {
+                                        <a asp-page="/Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-page="/Update" asp-route-id="@item.Id" class="btn btn-sm btn-outline-light">Update</a>
+                                        <a asp-page="/Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                                    }
+                                </div>
                             </td>
                         </tr>
                     }
@@ -56,3 +80,6 @@
         </div>
     </section>
 </div>
+
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/04/18/01/20260418012507-E6EQ81S1.js" defer></script>

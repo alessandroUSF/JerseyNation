@@ -1,0 +1,224 @@
+[
+  {
+    "groupName": "UEFA",
+    "teams": [
+      {
+        "name": "Austria",
+        "flagImage": "images/flags/at.png"
+      },
+      {
+        "name": "Belgium",
+        "flagImage": "images/flags/be.png"
+      },
+      {
+        "name": "Bosnia and Herzegovina",
+        "flagImage": "images/flags/ba.png"
+      },
+      {
+        "name": "Croatia",
+        "flagImage": "images/flags/hr.png"
+      },
+      {
+        "name": "Czech Republic",
+        "flagImage": "images/flags/cz.png"
+      },
+      {
+        "name": "England",
+        "flagImage": "images/flags/gb-eng.png"
+      },
+      {
+        "name": "France",
+        "flagImage": "images/flags/fr.png"
+      },
+      {
+        "name": "Germany",
+        "flagImage": "images/flags/de.png"
+      },
+      {
+        "name": "Netherlands",
+        "flagImage": "images/flags/nl.png"
+      },
+      {
+        "name": "Norway",
+        "flagImage": "images/flags/no.png"
+      },
+      {
+        "name": "Portugal",
+        "flagImage": "images/flags/pt.png"
+      },
+      {
+        "name": "Scotland",
+        "flagImage": "images/flags/gb-sct.png"
+      },
+      {
+        "name": "Spain",
+        "flagImage": "images/flags/es.png"
+      },
+      {
+        "name": "Sweden",
+        "flagImage": "images/flags/se.png"
+      },
+      {
+        "name": "Switzerland",
+        "flagImage": "images/flags/ch.png"
+      },
+      {
+        "name": "Turkey",
+        "flagImage": "images/flags/tr.png"
+      }
+    ]
+  },
+  {
+    "groupName": "CAF",
+    "teams": [
+      {
+        "name": "Algeria",
+        "flagImage": "images/flags/dz.png"
+      },
+      {
+        "name": "Cape Verde",
+        "flagImage": "images/flags/cv.png"
+      },
+      {
+        "name": "DR Congo",
+        "flagImage": "images/flags/cd.png"
+      },
+      {
+        "name": "Egypt",
+        "flagImage": "images/flags/eg.png"
+      },
+      {
+        "name": "Ghana",
+        "flagImage": "images/flags/gh.png"
+      },
+      {
+        "name": "Ivory Coast",
+        "flagImage": "images/flags/ci.png"
+      },
+      {
+        "name": "Morocco",
+        "flagImage": "images/flags/ma.png"
+      },
+      {
+        "name": "Senegal",
+        "flagImage": "images/flags/sn.png"
+      },
+      {
+        "name": "South Africa",
+        "flagImage": "images/flags/za.png"
+      },
+      {
+        "name": "Tunisia",
+        "flagImage": "images/flags/tn.png"
+      }
+    ]
+  },
+  {
+    "groupName": "AFC",
+    "teams": [
+      {
+        "name": "Australia",
+        "flagImage": "images/flags/au.png"
+      },
+      {
+        "name": "Iran",
+        "flagImage": "images/flags/ir.png"
+      },
+      {
+        "name": "Iraq",
+        "flagImage": "images/flags/iq.png"
+      },
+      {
+        "name": "Japan",
+        "flagImage": "images/flags/jp.png"
+      },
+      {
+        "name": "Jordan",
+        "flagImage": "images/flags/jo.png"
+      },
+      {
+        "name": "Qatar",
+        "flagImage": "images/flags/qa.png"
+      },
+      {
+        "name": "Saudi Arabia",
+        "flagImage": "images/flags/sa.png"
+      },
+      {
+        "name": "South Korea",
+        "flagImage": "images/flags/kr.png"
+      },
+      {
+        "name": "Uzbekistan",
+        "flagImage": "images/flags/uz.png"
+      }
+    ]
+  },
+  {
+    "groupName": "CONCACAF",
+    "teams": [
+      {
+        "name": "Canada",
+        "flagImage": "images/flags/ca.png"
+      },
+      {
+        "name": "Curaçao",
+        "flagImage": "images/flags/cw.png"
+      },
+      {
+        "name": "Haiti",
+        "flagImage": "images/flags/ht.png"
+      },
+      {
+        "name": "Mexico",
+        "flagImage": "images/flags/mx.png"
+      },
+      {
+        "name": "Panama",
+        "flagImage": "images/flags/pa.png"
+      },
+      {
+        "name": "United States",
+        "flagImage": "images/flags/us.png"
+      }
+    ]
+  },
+  {
+    "groupName": "CONMEBOL",
+    "teams": [
+      {
+        "name": "Argentina",
+        "flagImage": "images/flags/ar.png"
+      },
+      {
+        "name": "Brazil",
+        "flagImage": "images/flags/br.png"
+      },
+      {
+        "name": "Colombia",
+        "flagImage": "images/flags/co.png"
+      },
+      {
+        "name": "Ecuador",
+        "flagImage": "images/flags/ec.png"
+      },
+      {
+        "name": "Paraguay",
+        "flagImage": "images/flags/py.png"
+      },
+      {
+        "name": "Uruguay",
+        "flagImage": "images/flags/uy.png"
+      }
+    ]
+  },
+  {
+    "groupName": "OFC",
+    "teams": [
+      {
+        "name": "New Zealand",
+        "flagImage": "images/flags/nz.png"
+      }
+    ]
+  }
+]

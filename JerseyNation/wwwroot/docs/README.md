@@ -2,7 +2,9 @@
 
 Jersey Nation is a full-stack e-commerce simulation platform focused on selling national team soccer jerseys for the 2026 World Cup.
 
-The project combines e-commerce design, data visualization, user behavior tracking, and interactive data modeling to replicate a real-world digital commerce environment.
+The project combines e-commerce design, data visualization, user behavior tracking, AI chatbot integration, and interactive data modeling to replicate a real-world digital commerce environment.
+
+Originally developed using ASP.NET Core Razor Pages (C#), the project was later converted into a fully static website while preserving structure, functionality, and design quality.
 
 ---
 
@@ -15,6 +17,7 @@ This application was designed to demonstrate how modern digital commerce platfor
 - User behavior tracking  
 - Scalable data architecture  
 - Interactive documentation (ERD + Data Dictionary)  
+- AI-powered user interaction  
 
 It reflects both technical implementation and business-oriented thinking.
 
@@ -44,8 +47,27 @@ It reflects both technical implementation and business-oriented thinking.
   - Sales distribution  
 - Fully interactive elements:
   - Clickable flags  
-  - Clickable labels  
-- Improved scaling and responsiveness  
+  - Dynamic filters (daily, weekly, monthly)  
+  - Hover tooltips and responsive updates  
+- Improved scaling, responsiveness, and dataset handling  
+
+---
+
+### 🤖 AI Chatbots (Botpress Integration)
+
+Two chatbots were developed with distinct roles:
+
+**Pelé – Customer Assistant**
+- Helps users find products  
+- Provides recommendations based on teams and preferences  
+- Explains product details  
+
+**Maradona – Admin & Data Assistant**
+- Explains system structure and pages  
+- Interprets data and KPIs  
+- Supports administrative and analytical tasks  
+
+Both chatbots are integrated into multiple pages, enhancing usability and interactivity.
 
 ---
 
@@ -113,10 +135,12 @@ Additional design features:
 
 ## 🎨 User Experience
 
-- Responsive design (Bootstrap)  
+- Responsive design  
 - Custom dark theme (charcoal + green palette)  
 - Interactive UI components  
 - Consistent navigation across pages  
+
+The dark theme was intentionally chosen to create strong contrast and highlight the jerseys as the main visual element.
 
 ---
 
@@ -125,8 +149,9 @@ Additional design features:
 - ASP.NET Core Razor Pages  
 - C#  
 - HTML / CSS / JavaScript  
-- Bootstrap  
 - Chart.js  
+- Botpress  
+- AI Tools (for images and development support)  
 
 ---
 
@@ -158,56 +183,65 @@ https://localhost:7052
 - Demonstrates end-to-end thinking (UX, data, and backend structure)  
 - Implements interactive documentation (ERD and Data Dictionary)  
 - Introduces behavioral tracking for personalization  
-- Simulates real e-commerce decision flows  
+- Integrates AI chatbots for user and admin interaction  
+- Successfully converts a dynamic Razor application into a static website  
 
 ---
 
 ## 📌 Version
 
-Current Version: 1.1.0  
+Current Version: 2.0.0  
 
 ---
 
 ## 📜 Changelog
 
-### 🔄 v1.1.0 (Latest)
-- Added API page for structured data access  
-- Implemented Data Dictionary  
-- Built dynamic ERD with interactive JavaScript behavior  
-- Added CRUD Navigation section  
-- Implemented product search  
-- Added Next Matches feature  
-- Implemented cookie-based behavior tracking  
-- Improved chart interactivity (flags and labels clickable)  
-- Fixed chart scaling issues  
-- Added currency formatting with thousand separators  
-- General UI and UX refinements  
+### 🔄 v2.0.0 (Final Version)
+- Added AI Chatbots (Pelé and Maradona) with Botpress  
+- Integrated chatbots across multiple pages  
+- Converted full project from Razor Pages to static website  
+- Improved Data Visualization (filters, scaling, datasets)  
+- Fixed chart behavior and rendering issues  
+- Standardized UI and CSS structure  
+- Created bots.css for modular styling  
+- Improved responsiveness and layout consistency  
+- Added API details page  
+- General UI/UX refinements  
 
 ---
 
-### 🟢 v1.0.0 (Initial Release)
-- Core e-commerce structure implemented  
-- Product catalog and product detail pages  
-- Initial chart implementation  
-- Basic ERD structure  
-- Initial UI and layout  
-- Navigation framework  
+### 🔄 v1.1.0
+- Added API page  
+- Implemented Data Dictionary  
+- Built dynamic ERD  
+- Added CRUD Navigation  
+- Implemented search  
+- Added Next Matches feature  
+- Implemented behavior tracking  
+- Improved charts  
+
+---
+
+### 🟢 v1.0.0
+- Core e-commerce structure  
+- Product pages  
+- Initial charts  
+- Initial ERD  
 
 ---
 
 ## 🚧 Roadmap
 
-- Chatbot integration (customer support and recommendations)  
-- Persistent cart and checkout flow  
+- API integration with live data  
+- Persistent cart and checkout  
 - Payment gateway integration  
-- Personalized recommendations based on behavior tracking  
-- Real-time data integration  
+- Personalized recommendations  
+- Real-time analytics  
 
 ---
 
 ## 👨‍💻 Author
 
-Alessandro Almeida  
-alessandroalmeida@usf.edu
+Alessandro Luiz Sica de Almeida  
 University of South Florida  
 Master’s in AI & Business Analytics

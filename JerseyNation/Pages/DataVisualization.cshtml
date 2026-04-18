@@ -8,10 +8,44 @@
     <section class="section-card mb-4">
         <h1>Data Visualization</h1>
         <p>
-            This page presents three interactive Chart.js visualizations related to the JerseyNation e-commerce prototype.
-            The current charts use fixed dummy data designed to simulate realistic business activity. In a production version,
-            these metrics would be dynamically retrieved from a database and connected to live operational data.
+            This page presents interactive Chart.js visualizations related to the JerseyNation e-commerce prototype.
+            The charts and KPI panels use fixed dummy data designed to simulate realistic business activity across multiple
+            periods, including this month and last month. In a production version, these metrics would be dynamically retrieved
+            from a database and connected to live operational data.
         </p>
+    </section>
+
+    <section class="section-card mb-4">
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+            <div>
+                <h2 class="mb-1">Executive Performance Summary</h2>
+                <p class="mb-0">
+                    Select a business period and a KPI group to review financial performance, orders, marketing efficiency, site behavior, support activity, and service quality indicators.
+                </p>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2">
+                <select id="executivePeriodFilter" class="form-select chart-filter">
+                    <option value="thisMonth" selected>This Month</option>
+                    <option value="lastMonth">Last Month</option>
+                    <option value="last7">Last 7 Days</option>
+                    <option value="last30">Last 30 Days</option>
+                </select>
+
+                <select id="executiveGroupFilter" class="form-select chart-filter">
+                    <option value="keyMetrics" selected>Key Metrics</option>
+                    <option value="all">All Metrics</option>
+                    <option value="financial">Financial Results</option>
+                    <option value="sales">Orders and Sales</option>
+                    <option value="expenses">Expenses</option>
+                    <option value="marketing">Marketing Performance</option>
+                    <option value="navigation">Site Navigation</option>
+                    <option value="service">Customer Service</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="executiveSummaryCards" class="summary-cards"></div>
     </section>
 
     <section class="section-card mb-4">
@@ -21,7 +55,7 @@
             <select id="performanceView" class="form-select chart-filter">
                 <option value="daily">Daily</option>
                 <option value="weekly">Weekly</option>
-                <option value="monthly">Monthly</option>
+                <option value="monthly" selected>Monthly</option>
             </select>
         </div>
 
@@ -32,47 +66,69 @@
         <canvas id="dailyPerformanceChart"></canvas>
     </section>
 
-
     <section class="section-card mb-4">
-        <h2>Team Jersey Views, Purchases, Revenue, and Conversion</h2>
+        <h2>Team Jersey Views, Purchases, Revenue, Costs, and Conversion</h2>
         <p>
-            This chart compares views, purchases, and revenue across selected national teams. Conversion rate is displayed above
-            the purchase bars to show how effectively product views turn into sales.
+            This chart compares views, purchases, revenue, and cost across selected national teams. Conversion rate is displayed above
+            the purchase bars, while the financial line series help show cost efficiency and gross margin by team.
         </p>
         <canvas id="teamPerformanceChart"></canvas>
     </section>
 
-
-    <section>
-
-        <div class="section-card mt-4">
-            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
-                <div>
-                    <h2 class="mb-1">Sales Mix by Country</h2>
-                    <p class="mb-0" id="countrySalesSummary">
-                        Select a country to see simulated sales by jersey type, total quantity, and total revenue.
-                    </p>
-                </div>
+    <section class="section-card mt-4 mb-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+            <div>
+                <h2 class="mb-1">Sales Mix by Country</h2>
+                <p class="mb-0" id="countrySalesSummary">
+                    Select a country and a period to see sales by jersey type, total quantity, total revenue, and purchase quality indicators.
+                </p>
             </div>
 
-            <div id="countrySalesSelector" class="flag-strip mb-3"></div>
+            <select id="countryPeriodFilter" class="form-select chart-filter">
+                <option value="thisMonth" selected>This Month</option>
+                <option value="lastMonth">Last Month</option>
+                <option value="last30">Last 30 Days</option>
+            </select>
+        </div>
 
-            <div class="row g-4">
-                <div class="col-lg-7">
-                    <canvas id="countryTypePieChart"></canvas>
-                </div>
-                <div class="col-lg-5">
-                    <div class="section-card h-100">
-                        <h3 class="mb-3">Selected Country Totals</h3>
-                        <p class="mb-2"><strong>Country:</strong> <span id="selectedCountryName">Brazil</span></p>
-                        <p class="mb-2"><strong>Total jerseys sold:</strong> <span id="selectedCountryQty">0</span></p>
-                        <p class="mb-0"><strong>Total sales value:</strong> <span id="selectedCountryValue">US$ 0.00</span></p>
-                    </div>
+        <div id="countrySalesSelector" class="flag-strip mb-3"></div>
+
+        <div class="row g-4 align-items-stretch">
+            <div class="col-lg-7">
+                <canvas id="countryTypePieChart"></canvas>
+            </div>
+            <div class="col-lg-5">
+                <div class="section-card h-100 country-details-card">
+                    <h3 class="mb-3">Selected Country Totals</h3>
+                    <p class="mb-2"><strong>Country:</strong> <span id="selectedCountryName">Brazil</span></p>
+                    <p class="mb-2"><strong>Total jerseys sold:</strong> <span id="selectedCountryQty">0</span></p>
+                    <p class="mb-2"><strong>Total sales value:</strong> <span id="selectedCountryValue">US$ 0.00</span></p>
+                    <p class="mb-2"><strong>Total orders:</strong> <span id="selectedCountryOrders">0</span></p>
+                    <p class="mb-2"><strong>Average order value:</strong> <span id="selectedCountryAov">US$ 0.00</span></p>
+                    <p class="mb-2"><strong>Average products per order:</strong> <span id="selectedCountryUnitsPerOrder">0.00</span></p>
+                    <p class="mb-0"><strong>Conversion rate:</strong> <span id="selectedCountryConversion">0.0%</span></p>
                 </div>
             </div>
         </div>
-    </section>
 
+        <div class="section-card mt-4">
+            <h3 class="mb-3">Country Sales Table</h3>
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle analytics-table mb-0">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Units</th>
+                            <th>Revenue</th>
+                            <th>Share of Units</th>
+                            <th>Average Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="countrySalesBreakdownBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
     <section class="section-card mb-4">
         <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
@@ -80,7 +136,7 @@
 
             <select id="marketingView" class="form-select chart-filter">
                 <option value="weekly">Weekly</option>
-                <option value="monthly">Monthly</option>
+                <option value="monthly" selected>Monthly</option>
             </select>
         </div>
 
@@ -90,9 +146,75 @@
         </p>
         <canvas id="marketingPerformanceChart"></canvas>
     </section>
+
+    <section class="section-card mb-4">
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+            <div>
+                <h2 class="mb-1">By Campaign and Period</h2>
+                <p class="mb-0" id="costCompositionSummary">
+                    Review financial composition by overall period or compare campaign efficiency within the selected period.
+                </p>
+            </div>
+
+            <div class="campaign-filter-grid">
+                <select id="costViewMode" class="form-select chart-filter">
+                    <option value="period" selected>By Period</option>
+                    <option value="campaign">By Campaign</option>
+                </select>
+
+                <select id="costPeriodFilter" class="form-select chart-filter">
+                    <option value="thisMonth" selected>This Month</option>
+                    <option value="lastMonth">Last Month</option>
+                    <option value="last30">Last 30 Days</option>
+                </select>
+
+                <select id="costComparePeriodFilter" class="form-select chart-filter">
+                    <option value="lastMonth" selected>Compare to Last Month</option>
+                    <option value="thisMonth">Compare to This Month</option>
+                    <option value="last30">Compare to Last 30 Days</option>
+                </select>
+
+                <select id="campaignFilter" class="form-select chart-filter d-none">
+                    <option value="facebookAds">Facebook Ads</option>
+                    <option value="instagramAds" selected>Instagram Ads</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="coupons">Coupons</option>
+                </select>
+
+                <select id="campaignCompareFilter" class="form-select chart-filter d-none">
+                    <option value="allCampaigns" selected>All Campaigns</option>
+                    <option value="facebookAds">Facebook Ads</option>
+                    <option value="instagramAds">Instagram Ads</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="coupons">Coupons</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+            <div class="col-lg-5">
+                <canvas id="costCompositionChart"></canvas>
+            </div>
+            <div class="col-lg-7">
+                <div class="section-card h-100">
+                    <h3 class="mb-3">Financial Breakdown</h3>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover align-middle analytics-table analytics-table-compact mb-0">
+                            <thead id="costBreakdownHead"></thead>
+                            <tbody id="costBreakdownBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="~/js/charts-data.js" asp-append-version="true"></script>
 }
+
+
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/04/18/01/20260418012507-E6EQ81S1.js" defer></script>

@@ -1,0 +1,311 @@
+﻿@page
+@model ChatbotModel
+@{
+    ViewData["Title"] = "Pelé ChatBot";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/bots.css" asp-append-version="true" />
+}
+
+<div class="page-spacer chatbot-page">
+
+    <section class="section-card mb-4 text-center">
+        <h1 class="hero-title">JerseyNation Pelé - AI Assistant</h1>
+        <p class="hero-subtitle chatbot-intro">
+            Pelé is JerseyNation's shopping assistant. Built with Botpress, it helps customers explore jerseys,
+            compare products, understand policies, check delivery timing, and connect purchases to the 2026 World Cup schedule.
+        </p>
+        <div class="mt-4 d-flex justify-content-center flex-wrap gap-2 chatbot-actions">
+            <a href="/docs/Pele_SYSTEM_PROMPT_v5.txt" class="btn btn-outline-primary" target="_blank">ShopBot Configuration</a>
+            <a asp-page="/ChatBot2" class="btn btn-outline-light">Admin ChatBot</a>
+        </div>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2>About the ChatBot</h2>
+        <p>
+            Pelé is the customer-facing AI assistant created for JerseyNation. It was designed to support users during the shopping
+            journey and answer questions about official national team jerseys featured on the website.
+        </p>
+        <p>
+            The ChatBot can help with product recommendations, prices, sizes, premium items, shipping, delivery timing, store policies,
+            authenticity, and other common support questions. It also uses World Cup match information so users can connect jerseys with
+            upcoming games, teams, and locations.
+        </p>
+        <p class="mb-0">
+            While Maradona focuses on project and analytical support, Pele is centered on customer service, sales guidance, and a more
+            engaging shopping experience.
+        </p>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2>Pages Where Pelé Is Active</h2>
+        <p class="mb-3">Pelé appears in customer-facing sections of the website to guide browsing, shopping, and product decisions.</p>
+        <div class="row chatbot-grid-3">
+            <div class="col-md-6 col-lg-4">
+                <a asp-page="/Index" class="pages-card-link">
+                    <div class="section-card chatbot-mini-card mb-0">
+                        <div class="chatbot-icon">🏠</div>
+                        <h3>Home</h3>
+                        <p>Project overview, featured highlights, and first contact with the shopping assistant.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a asp-page="/Shop" class="pages-card-link">
+                    <div class="section-card chatbot-mini-card mb-0">
+                        <div class="chatbot-icon">🛍️</div>
+                        <h3>Shop</h3>
+                        <p>Catalog browsing, product filtering, recommendations, and product-related questions.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a asp-page="/ProductDetails" asp-route-id="1" class="pages-card-link">
+                    <div class="section-card chatbot-mini-card mb-0">
+                        <div class="chatbot-icon">📦</div>
+                        <h3>Product Details</h3>
+                        <p>Help with sizes, pricing, delivery expectations, and purchase confidence.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2>Data Used by Pelé</h2>
+        <p>
+            Pele uses structured product and World Cup data prepared for the project and converted into a Botpress knowledge base.
+            The ChatBot uses these records to answer customer questions with consistent and focused responses.
+        </p>
+        <div class="row g-4 mt-1">
+            <div class="col-lg-6">
+                <h3>Main product data</h3>
+                <ul class="chatbot-data-list">
+                    <li>Product ID, product name, team, category, and price</li>
+                    <li>Audience, size availability, premium status, and special features</li>
+                    <li>Collector items such as signed and match-worn jerseys</li>
+                    <li>Promotional prices and catalog highlights</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3>Main World Cup data</h3>
+                <ul class="chatbot-data-list">
+                    <li>Match date, teams, host city, and stadium context</li>
+                    <li>Connections between store teams and upcoming games</li>
+                    <li>Schedule-based answers for delivery and gift planning</li>
+                    <li>Support for shopping questions tied to specific matches</li>
+                </ul>
+            </div>
+        </div>
+        <p class="chatbot-note mt-3 mb-3">Below are 5 example rows from each table used in the knowledge base.</p>
+
+        <h3 class="mb-2">Product catalog — 5 example rows</h3>
+        <div class="table-responsive mb-4">
+            <table class="table align-middle chatbot-data-table mb-0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product</th>
+                        <th>Team</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>P001</td><td>Brazil Home Jersey 2026</td><td>Brazil</td><td>Standard</td><td>$99.99</td></tr>
+                    <tr><td>P002</td><td>Argentina 2026 Home Jersey</td><td>Argentina</td><td>Best Seller</td><td>$79.99</td></tr>
+                    <tr><td>P003</td><td>France Away Jersey 2026</td><td>France</td><td>Standard</td><td>$95.99</td></tr>
+                    <tr><td>P004</td><td>Brazil Signed 2026 Home</td><td>Brazil</td><td>Signed / COA</td><td>$229.99</td></tr>
+                    <tr><td>P005</td><td>England Match-Worn Jersey</td><td>England</td><td>Match-Worn</td><td>$1,499.99</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="mb-2">World Cup schedule — 5 example rows</h3>
+        <div class="table-responsive">
+            <table class="table align-middle chatbot-data-table mb-0">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Match</th>
+                        <th>Location</th>
+                        <th>Use in chatbot</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>June 13, 2026</td><td>Brazil vs Morocco</td><td>New York / New Jersey</td><td>Delivery and Brazil jersey questions</td></tr>
+                    <tr><td>June 16, 2026</td><td>Argentina vs Algeria</td><td>Kansas City</td><td>Argentina product recommendations</td></tr>
+                    <tr><td>June 17, 2026</td><td>England vs Croatia</td><td>Dallas</td><td>England jersey and timing questions</td></tr>
+                    <tr><td>June 19, 2026</td><td>Brazil vs Haiti</td><td>Philadelphia</td><td>Follow-up Brazil schedule questions</td></tr>
+                    <tr><td>June 27, 2026</td><td>Panama vs England</td><td>New York / New Jersey</td><td>England support and gifting context</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2 class="mb-3">What You Can Ask</h2>
+        <div class="row chatbot-grid-3">
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card chatbot-mini-card mb-0">
+                    <div class="chatbot-icon">👕</div>
+                    <h3>Products and pricing</h3>
+                    <p>Ask about available jerseys, prices, categories, premium pieces, and team-specific products.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card chatbot-mini-card mb-0">
+                    <div class="chatbot-icon">🚚</div>
+                    <h3>Shipping and delivery</h3>
+                    <p>Ask whether an order can arrive before a match, dispatch timing, express shipping, and delivery guidance.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card chatbot-mini-card mb-0">
+                    <div class="chatbot-icon">🔄</div>
+                    <h3>Returns and policies</h3>
+                    <p>Ask about exchanges, refunds, international shipping, payment methods, and store support details.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card chatbot-mini-card mb-0">
+                    <div class="chatbot-icon">⚽</div>
+                    <h3>World Cup matches</h3>
+                    <p>Ask about match dates, opponents, host cities, timing, and schedule details for featured teams.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card chatbot-mini-card mb-0">
+                    <div class="chatbot-icon">🎁</div>
+                    <h3>Recommendations</h3>
+                    <p>Ask for suggestions by team, budget, collector profile, gift purpose, or upcoming match.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card chatbot-mini-card mb-0">
+                    <div class="chatbot-icon">📜</div>
+                    <h3>Authenticity and support</h3>
+                    <p>Ask about signed items, certificates of authenticity, product legitimacy, and common support questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2>Suggested Questions</h2>
+        <div class="row g-4 mt-1">
+            <div class="col-md-6">
+                <div class="sq-label">Shopping</div>
+                <ul class="sq-list">
+                    <li>Do you have Brazil jerseys in size L?</li>
+                    <li>What is your cheapest jersey on promotion?</li>
+                    <li>Which jersey would you recommend for a gift?</li>
+                    <li>Do you have any signed or match-worn products?</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="sq-label">Delivery and World Cup</div>
+                <ul class="sq-list">
+                    <li>If I buy now, will it arrive before Brazil's next match?</li>
+                    <li>When is Argentina's next World Cup game?</li>
+                    <li>Do you offer international shipping?</li>
+                    <li>What is your return policy if the jersey does not fit?</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2>Example Conversations</h2>
+        <p class="mb-2">Click one of the sample questions to view the full conversation example.</p>
+
+        <div class="chatbot-question-grid" id="pele-question-grid">
+            <button type="button" class="chatbot-question-btn active" data-target="pele-convo-1">Will the Brazil jersey arrive before the next match?</button>
+            <button type="button" class="chatbot-question-btn" data-target="pele-convo-2">What sizes do you have for the Brazil away jersey?</button>
+            <button type="button" class="chatbot-question-btn" data-target="pele-convo-3">When is Argentina's next game?</button>
+            <button type="button" class="chatbot-question-btn" data-target="pele-convo-4">What do you recommend as a Brazil gift?</button>
+        </div>
+
+        <div class="chatbot-conversation-box">
+            <div id="pele-convo-1" class="chatbot-conversation active">
+                <div class="chatbot-role">⚽ Pelé</div>
+                <p><strong>User:</strong> If I buy the Brazilian jersey today, will I receive it before their next game?</p>
+                <p><strong>Pelé:</strong> Yes, you should receive it well before the match, just place your order soon and you're all set. ✅</p>
+                <p>Brazil's next game is <strong>June 13, 2026 against Morocco</strong> at MetLife Stadium in New York / New Jersey, with kickoff at 6:00 PM local time and 7:00 PM Brasília time.</p>
+                <p>Today is April 17, 2026, so there are still 57 days until the match. Orders are dispatched within 1 business day, so standard shipping should arrive with plenty of time to spare.</p>
+                <p>You'll be ready to cheer for Brazil with time to spare. ⚽</p>
+                <p class="mb-2"><strong>Brazil 2026 Away Jersey</strong><br />Price: $94.99 (was $104.99)</p>
+                <p>Our best-selling Brazil away jersey is available in S, M, L, and XL.</p>
+                <p class="mb-0">Would you like to see the signed edition with Vini Jr, Neymar, and Enderson? 🏆</p>
+            </div>
+
+            <div id="pele-convo-2" class="chatbot-conversation">
+                <div class="chatbot-role">⚽ Pelé</div>
+                <p><strong>User:</strong> What sizes do you have for the Brazil away jersey?</p>
+                <p><strong>Pelé:</strong> The Brazil 2026 Away Jersey is available in <strong>S, M, L, and XL</strong>. 👕</p>
+                <p>If you are looking for something more special, the signed edition comes in M, L, and XL and includes a Certificate of Authenticity.</p>
+                <p class="mb-2"><strong>Brazil Signed 2026 Home Jersey</strong><br />Price: $229.99 (was $259.99)</p>
+                <p>This premium version is ideal for collectors or as a memorable gift.</p>
+                <p class="mb-0">Would you like more details on the signed version, or are you ready to pick a size?</p>
+            </div>
+
+            <div id="pele-convo-3" class="chatbot-conversation">
+                <div class="chatbot-role">🏆 World Cup</div>
+                <p><strong>User:</strong> When is Argentina's next game?</p>
+                <p><strong>Pelé:</strong> Argentina's next match is <strong>June 16, 2026 against Algeria</strong> at Arrowhead Stadium in Kansas City, with kickoff at 8:00 PM local time and 10:00 PM Brasília time.</p>
+                <p>Since you are asking about Argentina, you may also want to support them with our most popular jersey before the match.</p>
+                <p class="mb-2"><strong>Argentina 2026 Home Jersey</strong><br />Price: $79.99 (was $94.99)</p>
+                <p>This is one of our best-selling jerseys and is available in S, M, and L.</p>
+                <p class="mb-0">Would you like to see our premium Argentina match-worn edition as well?</p>
+            </div>
+
+            <div id="pele-convo-4" class="chatbot-conversation">
+                <div class="chatbot-role">⚽ Pelé</div>
+                <p><strong>User:</strong> I want to give a jersey as a gift for someone who loves Brazil. What do you recommend?</p>
+                <p><strong>Pelé:</strong> That is a great gift idea. For a truly memorable option, I would recommend the signed collector's edition. 🇧🇷</p>
+                <p>It is signed by <strong>Vini Jr, Neymar, and Enderson</strong>, includes a Certificate of Authenticity, and comes from the premium collection.</p>
+                <p class="mb-2"><strong>Brazil Signed 2026 Home Jersey</strong><br />Price: $229.99 (was $259.99)</p>
+                <p>It is one of the strongest gift options in the store, especially ahead of the World Cup.</p>
+                <p class="mb-0">Do you know the person's size, or would you prefer a standard jersey at a lower price point?</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card text-center">
+        <h2>Try the ChatBot</h2>
+        <p class="chatbot-intro mb-3">
+            Use the chat icon in the corner of the screen to open Pelé and start asking questions about jerseys,
+            prices, delivery timing, store policies, and the World Cup schedule.
+        </p>
+        <div class="d-flex justify-content-center flex-wrap gap-2 chatbot-actions">
+            <a href="/docs/Pele_SYSTEM_PROMPT_v5.txt" class="btn btn-outline-primary" target="_blank">ShopBot Configuration</a>
+            <a asp-page="/ChatBot2" class="btn btn-outline-light">Admin ChatBot</a>
+        </div>
+    </section>
+</div>
+</div>
+
+<script>
+    (function () {
+        const buttons = document.querySelectorAll('#pele-question-grid .chatbot-question-btn');
+        const conversations = document.querySelectorAll('.chatbot-conversation');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                const targetId = this.getAttribute('data-target');
+
+                buttons.forEach(btn => btn.classList.remove('active'));
+                conversations.forEach(item => item.classList.remove('active'));
+
+                this.classList.add('active');
+                const target = document.getElementById(targetId);
+                if (target) target.classList.add('active');
+            });
+        });
+    })();
+</script>
+
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/04/12/04/20260412044811-2GZKX0NN.js" defer></script>

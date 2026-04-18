@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<title>Maradona ChatBot - JerseyNation</title>
+<link rel="stylesheet" href="css/bots.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark border-bottom box-shadow mb-3 custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">JerseyNation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="mainNav">
+        <ul class="navbar-nav flex-grow-1">
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="charts.html">Charts</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="crud.html">CRUD Navigation</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="erd.html">ERD</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="api-details.html">API</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container">
+<main role="main" class="pb-3">
+
+<div class="page-spacer chatbot-page chatbot-page-admin">
+    <section class="section-card mb-4 text-center chatbot-hero-card">
+        <h1 class="hero-title">JerseyNation Maradona - Project &amp; Data Assistant</h1>
+        <p class="hero-subtitle mx-auto">
+            This page presents Maradona, the administrative and analytical chatbot developed for JerseyNation.
+            It was designed to support project presentation, site navigation, internal questions, and data interpretation
+            using simulated business, marketing, stock, KPI, and project documentation data.
+        </p>
+
+        <div class="mt-4 d-flex justify-content-center flex-wrap gap-2 chatbot-actions">
+            <a href="docs/MARADONA_SYSTEM_PROMPT_v2.txt" class="btn btn-outline-primary" target="_blank">AdminBot Configuration</a>
+            <a href="chatbot.html" class="btn btn-outline-light">Shop ChatBot</a>
+        </div>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2>About the chatbot</h2>
+        <p>
+            Maradona is the internal AI assistant created for JerseyNation. While Pelé focuses on customer support and shopping guidance,
+            Maradona was designed to help explain the academic project, guide users through technical pages, and interpret business-oriented data.
+        </p>
+        <p>
+            The chatbot operates across three main roles: project support, site navigation, and business data analysis. It can answer questions
+            about the structure of the website, the purpose of each page, the ERD and Data Dictionary, chart interpretation, project versions,
+            and simulated administrative insights such as margins, campaigns, complaints, stock levels, and KPI alerts.
+        </p>
+        <p class="mb-0">
+            This bot was created as the administrative counterpart to Pelé and is intended to strengthen both the presentation of the project
+            and the explanation of how the website could evolve into a more complete business solution.
+        </p>
+    </section>
+
+    <section class="mb-4">
+        <h2 class="mb-3">Operating Roles</h2>
+        <div class="row g-4 chatbot-card-grid">
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">📋</div>
+                    <h3>Project Support</h3>
+                    <p>
+                        Explains the assignment, project purpose, technologies used, versions, development choices,
+                        GitHub context, and implementation decisions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">🖥️</div>
+                    <h3>Site Navigation</h3>
+                    <p>
+                        Helps users understand the function of each page, the CRUD flow, the ERD structure,
+                        the Data Dictionary, APIs, charts, and which features are simulated or planned.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">📊</div>
+                    <h3>Data Interpretation</h3>
+                    <p>
+                        Interprets business KPIs, campaign performance, stock status, complaint rates,
+                        conversion, expenses, and other simulated metrics prepared for the project.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-4">
+        <h2 class="mb-3">Pages Where Maradona Is Active</h2>
+        <p class="mb-3">
+            Maradona is available on pages that support project explanation, internal guidance, and data interpretation.
+        </p>
+
+        <div class="row g-4 chatbot-card-grid">
+            <div class="col-md-6 col-lg-4">
+                <a href="index.html" class="pages-card-link">
+                    <div class="section-card h-100 chatbot-feature-card">
+                        <div class="chatbot-feature-icon">🏠</div>
+                        <h3>Home</h3>
+                        <p>Provides project overview support, key features explanation, and quick navigation help.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <a href="about.html" class="pages-card-link">
+                    <div class="section-card h-100 chatbot-feature-card">
+                        <div class="chatbot-feature-icon">📖</div>
+                        <h3>About</h3>
+                        <p>Explains project background, structure, academic context, and overall site purpose.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <a href="erd.html" class="pages-card-link">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">🧱</div>
+                    <h3>ERD</h3>
+                    <p>Supports the explanation of the logical data model, business blocks, and Data Dictionary.</p>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <a href="charts.html" class="pages-card-link">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">📊</div>
+                    <h3>Data Visualization</h3>
+                    <p>Interprets charts, KPIs, trends, and simulated performance indicators used in the prototype.</p>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <a href="crud.html" class="pages-card-link">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">🔧</div>
+                    <h3>CRUD Navigation</h3>
+                    <p>Explains create, read, update, delete actions and how they relate to the project logic.</p>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <a href="api-details.html" class="pages-card-link">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">🔌</div>
+                    <h3>API Details</h3>
+                    <p>Helps explain planned integrations, system evolution, and how external services connect to the model.</p>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2>Data used by Maradona</h2>
+        <p>
+            Maradona uses simulated project and business data prepared specifically for this academic prototype. The knowledge base includes
+            KPI summaries, campaign results, selected stock examples, alerts, project structure notes, and page-level explanations.
+        </p>
+        <p>
+            The goal is to allow the chatbot to answer both technical and managerial questions in a consistent way. The examples below show only
+            a small sample of the information included in the bot knowledge base.
+        </p>
+
+        <div class="chatbot-data-points mt-3">
+            <span class="chatbot-role">Revenue and margin KPIs</span>
+            <span class="chatbot-role">Expense alerts</span>
+            <span class="chatbot-role">Marketing campaign performance</span>
+            <span class="chatbot-role">Product stock examples</span>
+            <span class="chatbot-role">Complaint and chatbot metrics</span>
+            <span class="chatbot-role">Project and page explanations</span>
+        </div>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2>Sample data included in the knowledge base</h2>
+
+        <p class="mb-2"><strong>Executive KPI snapshot — 5 example rows</strong></p>
+        <div class="table-responsive mt-3">
+            <table class="table table-striped align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                        <th>Goal</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Revenue</td>
+                        <td>$134,821</td>
+                        <td>&gt; $130,000</td>
+                        <td>Above goal</td>
+                    </tr>
+                    <tr>
+                        <td>Net Margin</td>
+                        <td>$14,021</td>
+                        <td>&gt; $15,000</td>
+                        <td>Below goal</td>
+                    </tr>
+                    <tr>
+                        <td>Expenses</td>
+                        <td>$120,800</td>
+                        <td>&lt; $118,000</td>
+                        <td>Above goal</td>
+                    </tr>
+                    <tr>
+                        <td>Orders</td>
+                        <td>914</td>
+                        <td>&gt; 900</td>
+                        <td>Above goal</td>
+                    </tr>
+                    <tr>
+                        <td>Complaints</td>
+                        <td>22</td>
+                        <td>&lt; 20</td>
+                        <td>Warning</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="mt-4 mb-2"><strong>Marketing and stock examples — 5 example rows</strong></p>
+        <div class="table-responsive mt-3">
+            <table class="table table-striped align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th>Item / Campaign</th>
+                        <th>Type</th>
+                        <th>Key Value</th>
+                        <th>Observation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Instagram Ads</td>
+                        <td>Campaign</td>
+                        <td>7.1% conversion</td>
+                        <td>Best ROI this month</td>
+                    </tr>
+                    <tr>
+                        <td>YouTube</td>
+                        <td>Campaign</td>
+                        <td>5.6% conversion</td>
+                        <td>Underperforming channel</td>
+                    </tr>
+                    <tr>
+                        <td>England 2026 Away</td>
+                        <td>Product</td>
+                        <td>L only</td>
+                        <td>Critical stock status</td>
+                    </tr>
+                    <tr>
+                        <td>Argentina Match-Worn</td>
+                        <td>Product</td>
+                        <td>51% margin</td>
+                        <td>Premium rare item</td>
+                    </tr>
+                    <tr>
+                        <td>Chatbot Resolution</td>
+                        <td>KPI</td>
+                        <td>84.0%</td>
+                        <td>Slightly below target</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="mb-4">
+        <h2 class="mb-3">What you can ask</h2>
+
+        <div class="row g-4 chatbot-card-grid">
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">📋</div>
+                    <h3>Academic and project</h3>
+                    <p>Ask who built the site, what technologies were used, what versions were created, and how the project was organized.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">🖥️</div>
+                    <h3>Site navigation</h3>
+                    <p>Ask how CRUD works, what the ERD blocks mean, what APIs are planned, and which features are simulated in the prototype.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">📊</div>
+                    <h3>Sales and KPIs</h3>
+                    <p>Ask how sales are performing, which metrics are below target, and what the main business results are this month.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">📣</div>
+                    <h3>Marketing and campaigns</h3>
+                    <p>Ask which campaigns perform better, where budget should be shifted, and how conversion compares across channels.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">📦</div>
+                    <h3>Products and stock</h3>
+                    <p>Ask which products have the highest margin, which items are running low, and what deserves promotion or restock.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="section-card h-100 chatbot-feature-card">
+                    <div class="chatbot-feature-icon">🚨</div>
+                    <h3>Alerts and recommendations</h3>
+                    <p>Ask what the current red flags are, what needs attention first, and which actions could improve next month's results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2 class="mb-3">Example conversations</h2>
+        <p class="mb-3">Choose one of the sample questions below to view the full example conversation.</p>
+
+        <div class="example-question-grid">
+            <button type="button" class="btn btn-outline-primary example-question-btn active" data-convo="convo-1">How are sales performing this month?</button>
+            <button type="button" class="btn btn-outline-primary example-question-btn" data-convo="convo-2">Who built this site and what technology was used?</button>
+            <button type="button" class="btn btn-outline-primary example-question-btn" data-convo="convo-3">How does the CRUD audit log work?</button>
+            <button type="button" class="btn btn-outline-primary example-question-btn" data-convo="convo-4">Which marketing campaign should we invest more in?</button>
+            <button type="button" class="btn btn-outline-primary example-question-btn" data-convo="convo-5">Send the monthly report to my email.</button>
+        </div>
+
+        <div class="example-answer-panel mt-4">
+            <div class="example-conversation active" id="convo-1">
+                <div class="chatbot-role">📊 Data Analysis</div>
+                <p><strong>User:</strong> <em>How are sales performing this month?</em></p>
+                <p><strong>Maradona:</strong> Revenue and orders are <strong>above goal</strong>, but cost overruns are compressing the margin.</p>
+                <p><strong>On target:</strong> Revenue $134,821, 914 orders, 1,518 products sold, and average order value of $147.51.</p>
+                <p><strong>Alerts:</strong> Expenses are $120,800 against a target below $118,000, net margin is $14,021 against a goal above $15,000, and complaints reached 22 against a goal below 20.</p>
+                <p><strong>Recommendation:</strong> Review the delivery contract, people-related cost categories, and the root cause behind complaint growth, especially if shipping delays are affecting customer satisfaction.</p>
+                <p class="mb-0">Would you like a deeper breakdown of revenue, margin, campaigns, or complaint indicators?</p>
+            </div>
+
+            <div class="example-conversation" id="convo-2">
+                <div class="chatbot-role">📋 Project Support</div>
+                <p><strong>User:</strong> <em>Who built this site and what technology was used?</em></p>
+                <p><strong>Maradona:</strong> JerseyNation was built by <strong>Alessandro Luiz Sica de Almeida</strong> as an academic project for the Application Development for Analytics course.</p>
+                <p>The project was originally developed in <strong>ASP.NET Core Razor Pages using C#</strong> and later adapted into a static-friendly presentation structure for publishing and demonstration purposes.</p>
+                <p>The stack includes <strong>HTML, CSS, JavaScript, Bootstrap, Chart.js, and Botpress</strong>, combining interface design, navigation, charts, and chatbot integration in a single prototype.</p>
+                <p class="mb-0">I can also explain the project versions, the visual design decisions, or how the chatbot knowledge base was organized.</p>
+            </div>
+
+            <div class="example-conversation" id="convo-3">
+                <div class="chatbot-role">🖥️ Site Navigation</div>
+                <p><strong>User:</strong> <em>How does the CRUD audit log work?</em></p>
+                <p><strong>Maradona:</strong> The audit log is displayed at the bottom of the CRUD page and is used to show how administrative actions could be tracked in a more complete system.</p>
+                <p>Each create, update, or delete action can be associated with information such as <strong>timestamp, action type, affected product, user, and before/after values</strong>.</p>
+                <p>In the current academic prototype, this behavior is simulated to demonstrate logic and presentation. In a production version, the same concept would be backed by a database and protected user authentication.</p>
+                <p class="mb-0">I can also explain how this connects to the ERD and which tables would likely support a persistent audit structure.</p>
+            </div>
+
+            <div class="example-conversation" id="convo-4">
+                <div class="chatbot-role">📊 Data Analysis</div>
+                <p><strong>User:</strong> <em>Which marketing campaign should we invest more in?</em></p>
+                <p><strong>Maradona:</strong> <strong>Instagram Ads</strong> is the strongest candidate for additional investment this month.</p>
+                <p>It shows the best balance between conversion and margin, with <strong>7.1% conversion</strong> and the best overall ROI among the main campaigns. Facebook Ads is solid, while YouTube is underperforming with lower conversion.</p>
+                <p>The coupon campaign converts well, but its margin is much thinner, so it is better used selectively for acquisition or specific promotions.</p>
+                <p class="mb-0">A reasonable next step would be shifting part of the YouTube budget to Instagram and then monitoring conversion, margin, and complaint impact in the next cycle.</p>
+            </div>
+
+            <div class="example-conversation" id="convo-5">
+                <div class="chatbot-role">📊 Data Analysis</div>
+                <p><strong>User:</strong> <em>Yes, send the monthly report to my email.</em></p>
+                <p><strong>Maradona:</strong> Monthly Performance Report queued for delivery for <strong>April 2026</strong>.</p>
+                <p>The report includes the executive KPI summary, expense breakdown, campaign results, stock alerts, complaint indicators, chatbot performance, and practical recommendations based on this month's simulated data.</p>
+                <p>In this academic prototype, the delivery is <strong>simulated only</strong>. No real email is sent, but the conversation demonstrates how a future integrated reporting feature could work.</p>
+                <p class="mb-0">If needed, I can also generate a shorter executive summary focused only on finance, marketing, stock, or customer support.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2 class="mb-3">Suggested questions</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="chatbot-sq-group">
+                    <div class="chatbot-sq-label mb-2">Project and Technical</div>
+                    <p class="mb-2"><em>Who built JerseyNation and for what course?</em></p>
+                    <p class="mb-2"><em>What technologies were used in this project?</em></p>
+                    <p class="mb-2"><em>What versions were created during development?</em></p>
+                    <p class="mb-0"><em>What features are still simulated or pending?</em></p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="chatbot-sq-group">
+                    <div class="chatbot-sq-label mb-2">Site Navigation</div>
+                    <p class="mb-2"><em>How do I use the CRUD page?</em></p>
+                    <p class="mb-2"><em>What does each ERD block represent?</em></p>
+                    <p class="mb-2"><em>Where does the chart data come from?</em></p>
+                    <p class="mb-0"><em>What APIs are planned for the final version?</em></p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="chatbot-sq-group">
+                    <div class="chatbot-sq-label mb-2">Business Analysis</div>
+                    <p class="mb-2"><em>What are the main cost overruns this month?</em></p>
+                    <p class="mb-2"><em>Which product has the highest margin?</em></p>
+                    <p class="mb-2"><em>Which items are critically low in stock?</em></p>
+                    <p class="mb-0"><em>How is net margin performing against target?</em></p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="chatbot-sq-group">
+                    <div class="chatbot-sq-label mb-2">Alerts and Recommendations</div>
+                    <p class="mb-2"><em>What are the main red flags right now?</em></p>
+                    <p class="mb-2"><em>Which campaign should receive more budget?</em></p>
+                    <p class="mb-2"><em>What is causing the rise in complaints?</em></p>
+                    <p class="mb-0"><em>Generate a monthly executive report.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card text-center">
+        <h2>Try Maradona</h2>
+        <p class="mx-auto hero-subtitle">
+            Use the chat icon to open Maradona. The chatbot was designed to support project explanation,
+            internal navigation, and business-oriented data interpretation across the JerseyNation website.
+        </p>
+        <div class="mt-3">
+            <a href="chatbot.html" class="btn btn-outline-primary">Shop ChatBot</a>
+        </div>
+    </section>
+</div>
+
+
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/04/18/01/20260418012507-E6EQ81S1.js" defer></script>
+
+</main>
+</div>
+
+<footer class="border-top footer text-muted">
+  <div class="container">
+    &copy; 2026 - JerseyNation - <a href="privacy.html">Privacy</a>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/site.js"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.example-question-btn');
+        const conversations = document.querySelectorAll('.example-conversation');
+
+        buttons.forEach(button => {
+        button.addEventListener('click', function () {
+        const targetId = this.getAttribute('data-convo');
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+        conversations.forEach(panel => panel.classList.remove('active'));
+
+        this.classList.add('active');
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) {
+        targetPanel.classList.add('active');
+        }
+        });
+        });
+        });
+    </script>
+</body>
+</html>

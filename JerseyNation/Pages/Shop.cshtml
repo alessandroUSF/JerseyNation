@@ -1,11 +1,10 @@
 ﻿@page
+@using System.Globalization
 @model ShopModel
 @{
     ViewData["Title"] = "Shop";
 }
-@{
-    var cartItems = 0;
-}
+
 <div class="shop-page">
 
     <section class="section-card shop-toolbar mb-4">
@@ -86,13 +85,20 @@
                                  data-primary="@item.PrimaryImage"
                                  data-secondary="@item.SecondaryImage">
 
-                                <button type="button" class="image-nav prev-image" aria-label="Previous image">&#10094;</button>
+                                <span class="image-nav prev-image"
+                                      role="button"
+                                      tabindex="0"
+                                      aria-label="Previous image">&#10094;</span>
 
                                 <img src="@item.PrimaryImage"
                                      alt="@item.Name"
                                      class="product-image jersey-zoom" />
 
-                                <button type="button" class="image-nav next-image" aria-label="Next image">&#10095;</button>
+                                <span class="image-nav next-image"
+                                      role="button"
+                                      tabindex="0"
+                                      aria-label="Next image">&#10095;</span>
+
                             </div>
                         </a>
                         <div class="product-card-top">
@@ -121,14 +127,14 @@
                                 @if (item.IsPromotion && item.PromoPrice.HasValue)
                                 {
                                     <div>
-                                        <span class="old-price">$@item.SalePrice.ToString("0.00")</span>
+                                        <span class="old-price">$@item.SalePrice.ToString("N2", CultureInfo.GetCultureInfo("en-US"))</span>
                                         <span class="promo-badge">Promotion</span>
                                     </div>
-                                    <div class="new-price">$@item.PromoPrice.Value.ToString("0.00")</div>
+                                    <div class="new-price">$@item.PromoPrice.Value.ToString("N2", CultureInfo.GetCultureInfo("en-US"))</div>
                                 }
                                 else
                                 {
-                                    <div class="regular-price">$@item.SalePrice.ToString("0.00")</div>
+                                    <div class="regular-price">$@item.SalePrice.ToString("N2", CultureInfo.GetCultureInfo("en-US"))</div>
                                 }
 
                                 <div class="sizes-row">
@@ -226,13 +232,19 @@
                                  data-primary="@item.PrimaryImage"
                                  data-secondary="@item.SecondaryImage">
 
-                                <button type="button" class="image-nav prev-image" aria-label="Previous image">&#10094;</button>
+                                <span class="image-nav prev-image"
+                                      role="button"
+                                      tabindex="0"
+                                      aria-label="Previous image">&#10094;</span>
 
                                 <img src="@item.PrimaryImage"
                                      alt="@item.Name"
                                      class="product-image jersey-zoom" />
 
-                                <button type="button" class="image-nav next-image" aria-label="Next image">&#10095;</button>
+                                <span class="image-nav next-image"
+                                      role="button"
+                                      tabindex="0"
+                                      aria-label="Next image">&#10095;</span>
                             </div>
                         </a>                        
                         <div class="mb-2"><strong>@item.Team</strong></div>
@@ -242,8 +254,8 @@
                             @if (item.PromoPrice.HasValue)
                             {
                                 <div>
-                                    <span class="old-price">$@item.SalePrice.ToString("0.00")</span>
-                                    <div class="new-price">$@item.PromoPrice.Value.ToString("0.00")</div>
+                                    <span class="old-price">$@item.SalePrice.ToString("N2", CultureInfo.GetCultureInfo("en-US"))</span>
+                                    <div class="new-price">$@item.PromoPrice.Value.ToString("N2", CultureInfo.GetCultureInfo("en-US"))</div>
                                 </div>
                             }
 
@@ -292,13 +304,19 @@
                                  data-primary="@item.PrimaryImage"
                                  data-secondary="@item.SecondaryImage">
 
-                                <button type="button" class="image-nav prev-image" aria-label="Previous image">&#10094;</button>
+                                <span class="image-nav prev-image"
+                                      role="button"
+                                      tabindex="0"
+                                      aria-label="Previous image">&#10094;</span>
 
                                 <img src="@item.PrimaryImage"
                                      alt="@item.Name"
                                      class="product-image jersey-zoom" />
 
-                                <button type="button" class="image-nav next-image" aria-label="Next image">&#10095;</button>
+                                <span class="image-nav next-image"
+                                      role="button"
+                                      tabindex="0"
+                                      aria-label="Next image">&#10095;</span>
                             </div>
                         </a>
 
@@ -311,14 +329,14 @@
                                 @if (item.IsPromotion && item.PromoPrice.HasValue)
                                 {
                                     <div>
-                                        <span class="old-price">$@item.SalePrice.ToString("0.00")</span>
+                                        <span class="old-price">$@item.SalePrice.ToString("N2", CultureInfo.GetCultureInfo("en-US"))</span>
                                         <span class="promo-badge">Promotion</span>
                                     </div>
-                                    <div class="new-price">$@item.PromoPrice.Value.ToString("0.00")</div>
+                                    <div class="new-price">$@item.PromoPrice.Value.ToString("N2", CultureInfo.GetCultureInfo("en-US"))</div>
                                 }
                                 else
                                 {
-                                    <div class="regular-price">$@item.SalePrice.ToString("0.00")</div>
+                                    <div class="regular-price">$@item.SalePrice.ToString("N2", CultureInfo.GetCultureInfo("en-US"))</div>
                                 }
                             </div>
 
@@ -352,13 +370,19 @@
                                  data-primary="@item.PrimaryImage"
                                  data-secondary="@item.SecondaryImage">
 
-                                <button type="button" class="image-nav prev-image" aria-label="Previous image">&#10094;</button>
+                                <span class="image-nav prev-image"
+                                      role="button"
+                                      tabindex="0"
+                                      aria-label="Previous image">&#10094;</span>
 
                                 <img src="@item.PrimaryImage"
                                      alt="@item.Name"
                                      class="product-image jersey-zoom" />
 
-                                <button type="button" class="image-nav next-image" aria-label="Next image">&#10095;</button>
+                                <span class="image-nav next-image"
+                                      role="button"
+                                      tabindex="0"
+                                      aria-label="Next image">&#10095;</span>
                             </div>
                         </a>                        
                         <div class="mb-2"><strong>@item.Team</strong></div>
@@ -369,14 +393,14 @@
                                 @if (item.IsPromotion && item.PromoPrice.HasValue)
                                 {
                                     <div>
-                                        <span class="old-price">$@item.SalePrice.ToString("0.00")</span>
+                                        <span class="old-price">$@item.SalePrice.ToString("N2", CultureInfo.GetCultureInfo("en-US"))</span>
                                         <span class="promo-badge">Promotion</span>
                                     </div>
-                                    <div class="new-price">$@item.PromoPrice.Value.ToString("0.00")</div>
+                                    <div class="new-price">$@item.PromoPrice.Value.ToString("N2", CultureInfo.GetCultureInfo("en-US"))</div>
                                 }
                                 else
                                 {
-                                    <div class="regular-price">$@item.SalePrice.ToString("0.00")</div>
+                                    <div class="regular-price">$@item.SalePrice.ToString("N2", CultureInfo.GetCultureInfo("en-US"))</div>
                                 }
                             </div>
 
@@ -423,3 +447,8 @@
     </section>
 
 </div>
+
+@section Head {
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/04/12/04/20260412044811-2GZKX0NN.js" defer></script>
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<title>About - JerseyNation</title>
+<link rel="stylesheet" href="css/erd.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark border-bottom box-shadow mb-3 custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">JerseyNation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="mainNav">
+        <ul class="navbar-nav flex-grow-1">
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="charts.html">Charts</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="crud.html">CRUD Navigation</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="erd.html">ERD</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="api-details.html">API</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container">
+<main role="main" class="pb-3">
+
+<section class="section-card mb-4">
+    <div class="row g-4 align-items-start">
+        <div class="col-lg-8">
+            <h1 class="mb-3">About JerseyNation</h1>
+            <p>
+                JerseyNation is an e-commerce website focused on national team jerseys and related football products.
+                This project was built as an individual assignment and combines storefront design, product organization,
+                data modeling, and interactive pages for analytics and business presentation.
+            </p>
+            <p class="mb-0">
+                Below you can see the same business-block ERD preview from the full data-model page.
+                When you click any ERD block, the full ERD page opens with more details from the data dictionary, relationships, and API integration notes.
+            </p>
+        </div>
+        <div class="col-lg-4">
+            <div class="section-card mb-0">
+                <h2 class="h4 mb-3">Project summary</h2>
+                <ul class="mb-0">
+                    <li><strong>Student:</strong> Alessandro Luiz Sica de Almeida</li>
+                    <li><strong>Project:</strong> JerseyNation</li>
+                    <li><strong>Focus:</strong> E-commerce website for national team jerseys</li>
+                    <li><strong>ERD:</strong> Full diagram and data dictionary on the dedicated page</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="jn-erd-toolbar mb-3">
+    <a class="btn btn-primary" href="erd.html">Open ERD</a>
+    <a class="btn btn-outline-primary" href="api-details.html">API Details</a>
+    <a class="btn btn-outline-light" href="https://github.com/alessandroUSF/JerseyNation" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+    <a class="btn btn-outline-light" href="docs/readme.md" target="_blank" rel="noopener noreferrer">README</a>
+    <a class="btn btn-outline-light" href="docs/manual.md" target="_blank" rel="noopener noreferrer">Manual</a>
+</section>
+
+<section class="section-card mt-4 jn-content-card">
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <h2 class="jn-section-title mb-3">Background</h2>
+            <p>
+                My first HTML certification dates back to 1996, using a program called HotDog. 
+                Later, through my background in Advertising, I built many web pages and earned certifications 
+                in e-commerce development with ASP pages using Drumbeat, as well as in advanced dynamic pages 
+                built with Flash, which was widely used at the time for interactivity. </p><p>Although I have not worked 
+                professionally as a web developer for more than 15 years, I remained close to the field by leading 
+                large technology teams that delivered software projects in cybersecurity, marketing, sales, debt collection 
+                and customer service. Even when I was not coding directly, I stayed closely connected to web development 
+                and systems design.
+
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <h2 class="jn-section-title mb-3">This Assignment</h2>
+            <p>
+                This website was developed as an individual project. In addition to the storefront and content pages,
+                the project includes a structured logical data model that supports customers, orders, products, payments,
+                shipping, suppliers, and marketing activities.
+            </p>
+        </div>
+    </div>
+</section>
+
+<div class="about-erd-scope">
+<section class="diagram-card">
+<h2 class="diagram-title">Business-block ERD View</h2>
+<p class="diagram-text">This page includes an interactive image of the ERD Diagram. Even for a relatively small website, many tables are needed to manage the system properly and support safe, organized data administration. For that reason, the ERD is presented in business blocks, and the detailed description of each block appears below together with the Data Dictionary, which can also be accessed from the dedicated button on the full ERD page.</p>
+<p class="hint">Hover a block to preview richer table detail. Click any block in the diagram or use the buttons above to open the full ERD page, the data dictionary, or the API details page.</p>
+<div class="diagram" id="diagram" data-open-url="erd.html" role="button" tabindex="0" aria-label="Open full ERD page">
+<svg class="svg-layer" id="svgLayer"></svg>
+<div class="diagram-grid">
+<div class="title-card"><div><h2>JerseyNation<br>ERD Diagram</h2><p>Business-domain view with PK/FK connectors</p></div></div>
+
+<article class="block admin" data-id="admin"><div class="badge" style="background:var(--admin)">AD</div><h3>Administration & Governance</h3><p>Internal users, permissions, auditability, and system control.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">UserID</span></div><div class="field-chip"><span class="pill pk">PK</span><span class="name">PermissionID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">UpdatedByUserID → Order</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini">No mandatory external API</span></div><div class="tooltip" id="tt-admin"></div></article>
+
+<article class="block supplier" data-id="supplier"><div class="badge" style="background:var(--supplier)">SU</div><h3>Supplier & Procurement</h3><p>Supplier records, purchase orders, and inbound inventory flow.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">SupplierID</span></div><div class="field-chip"><span class="pill pk">PK</span><span class="name">SupplierOrderID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">ProductID → Catalog</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini api">Supplier / EDI API</span><span class="mini api">Inventory Sync API</span></div><div class="tooltip" id="tt-supplier"></div></article>
+
+<article class="block customer" data-id="customer"><div class="badge" style="background:var(--customer)">CU</div><h3>Customer Block</h3><p>Identity, addresses, preferences, and pre-purchase customer data.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">CustomerID</span></div><div class="field-chip"><span class="pill pk">PK</span><span class="name">CustomerAddressID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">CustomerID → Order</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini">No mandatory external API</span></div><div class="tooltip" id="tt-customer"></div></article>
+
+<article class="block central order" data-id="order"><div class="hub">Central hub</div><div class="badge" style="background:var(--order)">OR</div><h3>Order Block</h3><p>Core transaction engine linking customer, catalog, payment, and shipping.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">OrderID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">CustomerID → Customer</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">ProductID → Catalog</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">PaymentMethodID / ShippingMethodID</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini api">Fraud / Risk API</span><span class="mini api">Tax Calculation API</span></div><div class="connector-note">Core references: CustomerID, ProductID, BillingAddressID, ShippingAddressID, PaymentMethodID, ShippingMethodID.</div><div class="tooltip" id="tt-order"></div></article>
+
+<article class="block catalog" data-id="catalog"><div class="badge" style="background:var(--catalog)">PC</div><h3>Product Catalog</h3><p>Products, categories, teams, stock, and product media.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">ProductID</span></div><div class="field-chip"><span class="pill pk">PK</span><span class="name">CategoryID / TeamID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">SupplierID → Supplier</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini">No mandatory external API</span></div><div class="tooltip" id="tt-catalog"></div></article>
+
+<article class="block marketing" data-id="marketing"><div class="badge" style="background:var(--marketing)">MK</div><h3>Marketing Block</h3><p>Campaigns, promotions, coupons, featured matches, and customer engagement.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">CampaignID</span></div><div class="field-chip"><span class="pill pk">PK</span><span class="name">PromotionID / CouponID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">CouponID / OrderID</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini api">Email / CRM API</span><span class="mini api">Recommendation API</span><span class="mini api">Analytics API</span></div><div class="tooltip" id="tt-marketing"></div></article>
+
+<article class="block payment" data-id="payment"><div class="badge" style="background:var(--payment)">PA</div><h3>Payment Block</h3><p>Payment methods, gateway transactions, and refunds.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">PaymentID / PaymentMethodID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">OrderID → Order</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">PaymentID → PaymentTransaction</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini api">Payment Gateway API</span></div><div class="tooltip" id="tt-payment"></div></article>
+
+<article class="block shipping" data-id="shipping"><div class="badge" style="background:var(--shipping)">SH</div><h3>Shipping & Delivery</h3><p>Shipping methods, rates, carrier tracking, and delivery execution.</p><div class="group-label">Key relationship fields</div><div class="field-grid"><div class="field-chip"><span class="pill pk">PK</span><span class="name">ShippingMethodID</span></div><div class="field-chip"><span class="pill pk">PK</span><span class="name">ShipmentID</span></div><div class="field-chip"><span class="pill fk">FK</span><span class="name">OrderID → Order</span></div></div><div class="group-label">External services</div><div class="mini-grid"><span class="mini api">Shipping Rate API</span><span class="mini api">Carrier Tracking API</span><span class="mini api">Address Validation API</span></div><div class="tooltip" id="tt-shipping"></div></article>
+</div></div></section>
+</div>
+
+
+
+
+
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/04/18/01/20260418012507-E6EQ81S1.js" defer></script>
+
+</main>
+</div>
+
+<footer class="border-top footer text-muted">
+  <div class="container">
+    &copy; 2026 - JerseyNation - <a href="privacy.html">Privacy</a>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/site.js"></script>
+<script src="js/erd.js"></script>
+</body>
+</html>

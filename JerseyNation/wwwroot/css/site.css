@@ -1,5 +1,7 @@
 html {
     font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -8,34 +10,49 @@ html {
     }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-
 body {
     margin-bottom: 60px;
+    background: linear-gradient(180deg, #1f2428 0%, #2b3036 100%);
+    color: #d9fbe1;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+/* Focus states */
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem rgba(87, 227, 137, 0.35);
+}
+
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
     color: var(--bs-secondary-color);
     text-align: end;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
 
-/*My custom style*/
+/* Shared layout */
 
-body {
-    background: linear-gradient(180deg, #1f2428 0%, #2b3036 100%);
-    color: #d9fbe1;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+.container main,
+.page-spacer,
+.section-card {
+    color: #e9f7ee;
+}
+
+.section-card {
+    background: rgba(33, 38, 43, 0.92);
+    border: 1px solid #3c444d;
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    margin-bottom: 1rem;
 }
 
 .custom-navbar {
@@ -43,71 +60,60 @@ body {
     border-bottom: 1px solid #222 !important;
 }
 
-    .custom-navbar .navbar-brand,
-    .custom-navbar .navbar-brand:visited,
-    .custom-navbar .navbar-brand:focus {
-        color: #ffffff !important;
-        font-weight: 800;
-    }
-
-        .custom-navbar .navbar-brand:hover {
-            color: #57e389 !important;
-        }
-
-    .custom-navbar .nav-link,
-    .custom-navbar .nav-link:visited,
-    .custom-navbar .nav-link:focus {
-        color: #ffffff !important;
-        font-weight: 600;
-    }
-
-        .custom-navbar .nav-link:hover {
-            color: #57e389 !important;
-        }
-
-.brand-jn,
-.shop-toolbar-brand {
-    font-size: 1.95rem;
+.custom-navbar .navbar-brand,
+.custom-navbar .navbar-brand:visited,
+.custom-navbar .navbar-brand:focus {
+    color: #ffffff !important;
     font-weight: 800;
-    color: #1f7a4d;
-    letter-spacing: 0.5px;
-    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 }
 
-.sizes-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem;
-    margin-top: 0.6rem;
-}
-
-.size-tag {
-    display: inline-block;
-    padding: 0.28rem 0.55rem;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.12);
-    color: #ffffff;
-    font-size: 0.8rem;
-    font-weight: 700;
-}
-
-    .size-tag.unavailable {
-        color: #ff9b9b;
-        text-decoration: line-through;
-        border-color: rgba(255,107,107,0.35);
-        background: rgba(255,107,107,0.08);
-    }
-
-
+.custom-navbar .navbar-brand:hover,
 .navbar-brand:hover {
-    color: #7bf1a8 !important;
+    color: #57e389 !important;
 }
 
-.container main,
-.page-spacer,
-.section-card {
-    color: #e9f7ee;
+.custom-navbar .nav-link,
+.custom-navbar .nav-link:visited,
+.custom-navbar .nav-link:focus {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #57e389 !important;
+}
+
+.footer {
+    background-color: rgba(24, 28, 31, 0.95);
+    color: #aab8ad !important;
+}
+
+.footer a {
+    color: #57e389 !important;
+}
+
+/* Typography */
+
+h1 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    color: #57e389;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #57e389;
+}
+
+p,
+li,
+label,
+span {
+    color: #e3efe7;
 }
 
 .hero-title {
@@ -123,16 +129,8 @@ body {
     max-width: 850px;
 }
 
-.section-card {
-    background: rgba(33, 38, 43, 0.92);
-    border: 1px solid #3c444d;
-    border-radius: 14px;
-    padding: 1.25rem;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
-    margin-bottom: 1rem;
-}
+/* Forms and buttons */
 
-.search-box input,
 .form-control,
 .form-select {
     background-color: #2b3036;
@@ -140,19 +138,17 @@ body {
     border: 1px solid #4c5864;
 }
 
-    .search-box input::placeholder,
-    .form-control::placeholder {
-        color: #a7b7ac;
-    }
+.form-control::placeholder {
+    color: #a7b7ac;
+}
 
-    .search-box input:focus,
-    .form-control:focus,
-    .form-select:focus {
-        background-color: #2b3036;
-        color: #ffffff;
-        border-color: #57e389;
-        box-shadow: 0 0 0 0.2rem rgba(87, 227, 137, 0.2);
-    }
+.form-control:focus,
+.form-select:focus {
+    background-color: #2b3036;
+    color: #ffffff;
+    border-color: #57e389;
+    box-shadow: 0 0 0 0.2rem rgba(87, 227, 137, 0.2);
+}
 
 .btn-primary {
     background-color: #57e389;
@@ -161,22 +157,22 @@ body {
     font-weight: 700;
 }
 
-    .btn-primary:hover {
-        background-color: #45c972;
-        border-color: #45c972;
-        color: #101814;
-    }
+.btn-primary:hover {
+    background-color: #45c972;
+    border-color: #45c972;
+    color: #101814;
+}
 
 .btn-outline-primary {
     color: #57e389;
     border-color: #57e389;
 }
 
-    .btn-outline-primary:hover {
-        background-color: #57e389;
-        border-color: #57e389;
-        color: #162018;
-    }
+.btn-outline-primary:hover {
+    background-color: #57e389;
+    border-color: #57e389;
+    color: #162018;
+}
 
 .jersey-badge {
     display: inline-block;
@@ -191,34 +187,32 @@ body {
     margin-bottom: 0.4rem;
 }
 
-.footer {
-    background-color: rgba(24, 28, 31, 0.95);
-    color: #aab8ad !important;
+.sizes-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.6rem;
 }
 
-    .footer a {
-        color: #57e389 !important;
-    }
-
-h1 {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    color: #57e389;
-}
-
-h2, h3, h4, h5 {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+.size-tag {
+    display: inline-block;
+    padding: 0.28rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-size: 0.8rem;
     font-weight: 700;
-    color: #57e389;
 }
 
-p, li, label, span {
-    color: #e3efe7;
+.size-tag.unavailable {
+    color: #ff9b9b;
+    text-decoration: line-through;
+    border-color: rgba(255, 107, 107, 0.35);
+    background: rgba(255, 107, 107, 0.08);
 }
 
-
-
-/* ===== Shop page ===== */
+/* Shop page */
 
 .shop-toolbar {
     background: linear-gradient(90deg, rgba(24, 28, 31, 0.96) 0%, rgba(38, 44, 49, 0.96) 100%);
@@ -233,6 +227,7 @@ p, li, label, span {
     color: #1f7a4d;
     letter-spacing: 0.5px;
     margin-left: 10px;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 }
 
 .btn-explore {
@@ -240,13 +235,13 @@ p, li, label, span {
     border: none;
     color: #ffffff;
     font-weight: 800;
-    box-shadow: 0 10px 20px rgba(31,122,77,0.20);
+    box-shadow: 0 10px 20px rgba(31, 122, 77, 0.20);
 }
 
 .btn-explore:hover {
-        background: linear-gradient(135deg, #24955e, #33b06f);
-        color: #ffffff;
-    }
+    background: linear-gradient(135deg, #24955e, #33b06f);
+    color: #ffffff;
+}
 
 .btn-cart {
     background-color: #ffffff;
@@ -261,10 +256,10 @@ p, li, label, span {
     padding-right: 2.8rem;
 }
 
-    .btn-cart:hover {
-        background-color: #ebf4ee;
-        color: #111111;
-    }
+.btn-cart:hover {
+    background-color: #ebf4ee;
+    color: #111111;
+}
 
 .cart-count {
     position: absolute;
@@ -290,7 +285,7 @@ p, li, label, span {
 .top-banner {
     border-radius: 18px;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
@@ -332,7 +327,7 @@ p, li, label, span {
 
 .shop-hero-visual {
     border-radius: 18px;
-    background: linear-gradient(135deg, rgba(0,0,0,0.10), rgba(0,0,0,0.35)), url('/images/shop-hero.png') center center / cover no-repeat;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.35)), url('/images/shop-hero.png') center center / cover no-repeat;
     min-height: 360px;
 }
 
@@ -363,19 +358,10 @@ p, li, label, span {
     font-size: 1.08rem;
     font-weight: 800;
     color: #8ff0b0;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(143,240,176,0.25);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(143, 240, 176, 0.25);
     border-radius: 999px;
     padding: 0.85rem 1.2rem;
-}
-
-.shipping-highlight {
-    margin-top: 1.1rem;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 800;
-    color: #9af7b9;
-    letter-spacing: 0.2px;
 }
 
 .hero-pill {
@@ -388,15 +374,6 @@ p, li, label, span {
     margin-bottom: 1rem;
     font-weight: 700;
     font-size: 0.88rem;
-}
-
-.shipping-banner {
-    display: inline-block;
-    padding: 0.7rem 1rem;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.08);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .product-card h3,
@@ -412,10 +389,6 @@ p, li, label, span {
     margin-bottom: 0.85rem;
 }
 
-.product-flag {
-    font-size: 1.5rem;
-}
-
 .product-team {
     font-weight: 700;
     color: #9af7b9;
@@ -425,6 +398,7 @@ p, li, label, span {
     color: #c8d6cc;
     font-size: 0.95rem;
 }
+
 .product-image-link {
     text-decoration: none;
     display: block;
@@ -458,13 +432,13 @@ p, li, label, span {
     cursor: zoom-in;
 }
 
-
 .image-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 38px;
     height: 38px;
+    cursor: pointer;
     border: none;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.55);
@@ -477,6 +451,11 @@ p, li, label, span {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.image-nav:focus {
+    outline: 2px solid #57e389;
+    outline-offset: 2px;
 }
 
 .product-image-frame:hover .image-nav {
@@ -495,7 +474,6 @@ p, li, label, span {
     right: 10px;
 }
 
-
 .btn-plus {
     width: 42px;
     height: 42px;
@@ -512,24 +490,21 @@ p, li, label, span {
 }
 
 .btn-plus:hover {
-        transform: translateY(-1px);
-        background: linear-gradient(135deg, #6ef09b, #38c978);
-        color: #08110d;
-    }
-
-.product-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 1rem;
-    margin-top: 1rem;
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, #6ef09b, #38c978);
+    color: #08110d;
 }
 
+.product-footer,
 .mini-product-footer {
     display: flex;
     justify-content: space-between;
     align-items: end;
     gap: 1rem;
+}
+
+.product-footer {
+    margin-top: 1rem;
 }
 
 .game-card {
@@ -558,7 +533,7 @@ p, li, label, span {
     height: 48px;
     object-fit: cover;
     border-radius: 4px;
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.18);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
     margin-bottom: 0.45rem;
 }
 
@@ -582,34 +557,14 @@ p, li, label, span {
     font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-    .match-flag-img {
-        width: 60px;
-        height: 40px;
-    }
-
-    .match-team-name {
-        font-size: 0.85rem;
-    }
-
-    .game-teams {
-        gap: 0.75rem;
-    }
-}
-
 .game-team-link {
     color: #ffffff;
     text-decoration: none;
     font-weight: 700;
 }
 
-    .game-team-link:hover {
-        color: #57e389;
-    }
-
-.game-vs {
-    color: #9fb0a2;
-    font-weight: 700;
+.game-team-link:hover {
+    color: #57e389;
 }
 
 .receive-badge {
@@ -646,14 +601,10 @@ p, li, label, span {
     transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-    .flag-link:hover {
-        color: #57e389;
-        border-color: #57e389;
-        transform: translateY(-1px);
-    }
-
-.flag-icon {
-    font-size: 1.1rem;
+.flag-link:hover {
+    color: #57e389;
+    border-color: #57e389;
+    transform: translateY(-1px);
 }
 
 .flag-name {
@@ -666,35 +617,12 @@ p, li, label, span {
     height: 16px;
     object-fit: cover;
     border-radius: 2px;
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.18);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
 }
 
 .legal-card p {
     color: #d8e3db;
 }
-
-@media (max-width: 768px) {
-    .shop-hero {
-        min-height: 360px;
-        padding: 1.5rem;
-    }
-
-        .shop-hero h1 {
-            font-size: 2rem;
-        }
-
-    .shop-search-form {
-        width: 100%;
-    }
-
-        .shop-search-form input {
-            min-width: 0;
-            width: 100%;
-        }
-}
-
-
-/* Promotional Prices*/
 
 .old-price {
     color: #ff6b6b;
@@ -725,42 +653,6 @@ p, li, label, span {
     font-size: 0.78rem;
     font-weight: 700;
 }
-
-.goalkeeper-flag {
-    display: inline-block;
-    margin-top: 0.45rem;
-    padding: 0.28rem 0.55rem;
-    border-radius: 999px;
-    background-color: rgba(80, 180, 255, 0.12);
-    color: #8fd3ff;
-    border: 1px solid rgba(80, 180, 255, 0.35);
-    font-size: 0.78rem;
-    font-weight: 700;
-}
-
-#dailyPerformanceChart,
-#teamPerformanceChart,
-#marketingPerformanceChart {
-    width: 100% !important;
-    min-height: 360px;
-}
-
-#countryTypePieChart {
-    max-width: 420px;
-    max-height: 420px;
-    margin: 0 auto;
-    display: block;
-}
-
-.country-sales-link {
-    border: 1px solid #3c444d;
-    background: rgba(255, 255, 255, 0.04);
-}
-
-    .country-sales-link.active-country {
-        border-color: #57e389;
-        box-shadow: 0 0 0 1px rgba(87, 227, 137, 0.25);
-    }
 
 .team-group-title {
     font-size: 1rem;
@@ -806,29 +698,353 @@ p, li, label, span {
     color: rgba(255, 255, 255, 0.55);
 }
 
+/* Charts and analytics */
 
+#dailyPerformanceChart,
+#teamPerformanceChart,
+#marketingPerformanceChart {
+    width: 100% !important;
+    min-height: 360px;
+}
 
+#countryTypePieChart {
+    max-width: 420px;
+    max-height: 420px;
+    margin: 0 auto;
+    display: block;
+}
+
+#costCompositionChart {
+    width: 100% !important;
+    max-width: 500px;
+    height: 430px !important;
+    max-height: 430px;
+    min-height: 430px;
+    margin: 0 auto;
+    display: block;
+}
+
+.country-sales-link {
+    border: 1px solid #3c444d;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.country-sales-link.active-country {
+    border-color: #57e389;
+    box-shadow: 0 0 0 1px rgba(87, 227, 137, 0.25);
+}
+
+.chart-filter {
+    min-width: 170px;
+    max-width: 220px;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+    gap: 0.95rem;
+}
+
+.summary-card {
+    position: relative;
+    border-radius: 14px;
+    padding: 1rem 1rem 0.95rem;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    overflow: visible;
+    border: 1px solid #3c444d;
+    background: rgba(255, 255, 255, 0.04);
+    border-top-width: 4px;
+}
+
+.summary-group-financial {
+    border-top-color: #57e389;
+    background: linear-gradient(180deg, rgba(87, 227, 137, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+}
+
+.summary-group-sales {
+    border-top-color: #ffd60a;
+    background: linear-gradient(180deg, rgba(255, 214, 10, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+}
+
+.summary-group-expenses {
+    border-top-color: #ff6b6b;
+    background: linear-gradient(180deg, rgba(255, 107, 107, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+}
+
+.summary-group-marketing {
+    border-top-color: #8fd3ff;
+    background: linear-gradient(180deg, rgba(143, 211, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+}
+
+.summary-group-navigation {
+    border-top-color: #b07cff;
+    background: linear-gradient(180deg, rgba(176, 124, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+}
+
+.summary-group-service {
+    border-top-color: #ff9f1c;
+    background: linear-gradient(180deg, rgba(255, 159, 28, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+}
+
+.summary-group-tag {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    font-weight: 800;
+    border-radius: 999px;
+    padding: 0.18rem 0.5rem;
+    margin-bottom: 0.55rem;
+}
+
+.summary-group-financial .summary-group-tag {
+    color: #9af7b9;
+    background: rgba(87, 227, 137, 0.14);
+    border: 1px solid rgba(87, 227, 137, 0.28);
+}
+
+.summary-group-sales .summary-group-tag {
+    color: #ffe37a;
+    background: rgba(255, 214, 10, 0.14);
+    border: 1px solid rgba(255, 214, 10, 0.28);
+}
+
+.summary-group-expenses .summary-group-tag {
+    color: #ffb2b2;
+    background: rgba(255, 107, 107, 0.14);
+    border: 1px solid rgba(255, 107, 107, 0.28);
+}
+
+.summary-group-marketing .summary-group-tag {
+    color: #bde7ff;
+    background: rgba(143, 211, 255, 0.14);
+    border: 1px solid rgba(143, 211, 255, 0.28);
+}
+
+.summary-group-navigation .summary-group-tag {
+    color: #d7c2ff;
+    background: rgba(176, 124, 255, 0.14);
+    border: 1px solid rgba(176, 124, 255, 0.28);
+}
+
+.summary-group-service .summary-group-tag {
+    color: #ffd199;
+    background: rgba(255, 159, 28, 0.14);
+    border: 1px solid rgba(255, 159, 28, 0.28);
+}
+
+.summary-label {
+    display: block;
+    font-size: 0.82rem;
+    color: #b9c8be;
+    margin-bottom: 0.42rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.summary-value {
+    font-size: 1.18rem;
+    color: #ffffff;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.summary-trend {
+    display: block;
+    margin-top: 0.45rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.summary-hover-card {
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 10px);
+    transform: translateX(-50%);
+    min-width: 240px;
+    max-width: 280px;
+    background: rgba(16, 20, 24, 0.98);
+    color: #e9f7ee;
+    border: 1px solid rgba(87, 227, 137, 0.25);
+    border-radius: 12px;
+    padding: 0.75rem 0.9rem;
+    box-shadow: 0 16px 26px rgba(0, 0, 0, 0.30);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    pointer-events: none;
+    z-index: 20;
+    text-align: left;
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.summary-card:hover .summary-hover-card {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.analytics-table {
+    background: transparent;
+}
+
+.analytics-table th,
+.analytics-table td {
+    background: transparent !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    color: #e9f7ee !important;
+}
+
+.analytics-table thead th {
+    color: #9af7b9 !important;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.analytics-table-compact th,
+.analytics-table-compact td {
+    white-space: nowrap !important;
+    font-size: 0.91rem;
+}
+
+.country-details-card p strong {
+    color: #9af7b9;
+}
+
+.campaign-filter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(170px, 220px));
+    gap: 0.65rem 0.75rem;
+    justify-content: end;
+    align-items: start;
+}
+
+.trend-up {
+    color: #7bf1a8;
+    font-weight: 700;
+}
+
+.trend-down {
+    color: #ff8b8b;
+    font-weight: 700;
+}
+
+.trend-neutral {
+    color: #d7e7db;
+    font-weight: 700;
+}
+
+/* CRUD */
 
 .crud-card {
     height: 100%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-    .crud-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+.crud-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.crud-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.crud-card p {
+    margin-bottom: 0;
+}
+
+.crud-table td:last-child,
+.crud-table th:last-child {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.crud-actions-cell {
+    white-space: nowrap;
+}
+
+.crud-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 768px) {
+    .match-flag-img {
+        width: 60px;
+        height: 40px;
     }
 
-    .crud-card h3 {
-        font-size: 1.15rem;
-        margin-bottom: 0.5rem;
+    .match-team-name {
+        font-size: 0.85rem;
     }
 
-    .crud-card p {
-        margin-bottom: 0;
+    .game-teams {
+        gap: 0.75rem;
     }
 
-.crud-table th,
-.crud-table td {
-    vertical-align: middle;
+    .shop-hero {
+        min-height: 360px;
+        padding: 1.5rem;
+    }
+
+    .shop-hero h1 {
+        font-size: 2rem;
+    }
+
+    .shop-search-form {
+        width: 100%;
+    }
+
+    .shop-search-form input {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .summary-cards {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+
+    #countryTypePieChart {
+        max-width: 360px;
+        max-height: 360px;
+    }
+
+    #costCompositionChart {
+        max-width: 390px;
+        height: 360px !important;
+        max-height: 360px;
+        min-height: 360px;
+    }
+
+    .campaign-filter-grid {
+        grid-template-columns: 1fr;
+        justify-content: stretch;
+        width: 100%;
+    }
+
+    .summary-hover-card {
+        max-width: 250px;
+    }
+
+    .analytics-table-compact th,
+    .analytics-table-compact td {
+        font-size: 0.86rem;
+    }
 }

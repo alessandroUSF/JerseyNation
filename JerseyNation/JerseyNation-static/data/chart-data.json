@@ -1,0 +1,332 @@
+{
+  "performanceData": {
+    "daily": {
+      "labels": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "sold": [
+        18,
+        24,
+        20,
+        29,
+        35,
+        42,
+        31
+      ],
+      "revenue": [
+        1650,
+        2240,
+        1910,
+        2780,
+        3360,
+        4210,
+        3050
+      ],
+      "costs": [
+        820,
+        1080,
+        930,
+        1360,
+        1650,
+        2060,
+        1490
+      ],
+      "profit": [
+        830,
+        1160,
+        980,
+        1420,
+        1710,
+        2150,
+        1560
+      ]
+    },
+    "weekly": {
+      "labels": [
+        "Week 1",
+        "Week 2",
+        "Week 3",
+        "Week 4"
+      ],
+      "sold": [
+        122,
+        138,
+        149,
+        161
+      ],
+      "revenue": [
+        11250,
+        12840,
+        13980,
+        15120
+      ],
+      "costs": [
+        5480,
+        6260,
+        6820,
+        7410
+      ],
+      "profit": [
+        5770,
+        6580,
+        7160,
+        7710
+      ]
+    },
+    "monthly": {
+      "labels": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr"
+      ],
+      "sold": [
+        20,
+        70,
+        210,
+        560
+      ],
+      "revenue": [
+        3400,
+        10900,
+        26850,
+        52100
+      ],
+      "costs": [
+        1900,
+        6100,
+        15000,
+        29200
+      ],
+      "profit": [
+        1500,
+        4800,
+        11850,
+        22900
+      ]
+    }
+  },
+  "teamData": [
+    {
+      "team": "Brazil",
+      "countryKey": "Brazil",
+      "flag": "images/flags/br.png",
+      "views": 820,
+      "purchases": 96,
+      "revenue": 8420
+    },
+    {
+      "team": "Argentina",
+      "countryKey": "Argentina",
+      "flag": "images/flags/ar.png",
+      "views": 760,
+      "purchases": 88,
+      "revenue": 7950
+    },
+    {
+      "team": "USA",
+      "countryKey": "United States",
+      "flag": "images/flags/us.png",
+      "views": 690,
+      "purchases": 79,
+      "revenue": 7010
+    },
+    {
+      "team": "Mexico",
+      "countryKey": "Mexico",
+      "flag": "images/flags/mx.png",
+      "views": 710,
+      "purchases": 83,
+      "revenue": 7340
+    },
+    {
+      "team": "England",
+      "countryKey": "England",
+      "flag": "images/flags/gb-eng.png",
+      "views": 540,
+      "purchases": 61,
+      "revenue": 5860
+    },
+    {
+      "team": "France",
+      "countryKey": "France",
+      "flag": "images/flags/fr.png",
+      "views": 500,
+      "purchases": 57,
+      "revenue": 5480
+    }
+  ],
+  "countrySalesData": {
+    "Argentina": {
+      "flag": "images/flags/ar.png",
+      "types": [
+        {
+          "type": "Home Jersey",
+          "quantity": 82,
+          "value": 6559.18
+        },
+        {
+          "type": "Match-Worn / Special",
+          "quantity": 6,
+          "value": 3899.94
+        }
+      ]
+    },
+    "Brazil": {
+      "flag": "images/flags/br.png",
+      "types": [
+        {
+          "type": "Home Jersey",
+          "quantity": 64,
+          "value": 5439.36
+        },
+        {
+          "type": "Away Jersey",
+          "quantity": 32,
+          "value": 3039.68
+        },
+        {
+          "type": "Signed / Special",
+          "quantity": 8,
+          "value": 1839.92
+        }
+      ]
+    },
+    "England": {
+      "flag": "images/flags/gb-eng.png",
+      "types": [
+        {
+          "type": "Away Jersey",
+          "quantity": 61,
+          "value": 6099.39
+        }
+      ]
+    },
+    "France": {
+      "flag": "images/flags/fr.png",
+      "types": [
+        {
+          "type": "Home Jersey",
+          "quantity": 57,
+          "value": 4559.43
+        },
+        {
+          "type": "Limited Goalkeeper / Away",
+          "quantity": 9,
+          "value": 1979.91
+        }
+      ]
+    },
+    "Mexico": {
+      "flag": "images/flags/mx.png",
+      "types": [
+        {
+          "type": "Training Jersey",
+          "quantity": 83,
+          "value": 5394.17
+        }
+      ]
+    },
+    "United States": {
+      "flag": "images/flags/us.png",
+      "types": [
+        {
+          "type": "Goalkeeper Jersey",
+          "quantity": 52,
+          "value": 4835.48
+        },
+        {
+          "type": "Training-Worn / Special",
+          "quantity": 7,
+          "value": 2099.93
+        }
+      ]
+    },
+    "South Africa": {
+      "flag": "images/flags/za.png",
+      "types": [
+        {
+          "type": "Away Jersey",
+          "quantity": 28,
+          "value": 2239.72
+        }
+      ]
+    }
+  },
+  "weeklyRevenueReference": [
+    6200,
+    7800,
+    7350,
+    10100,
+    11850,
+    11200
+  ],
+  "marketingData": {
+    "weekly": {
+      "labels": [
+        "Week 1",
+        "Week 2",
+        "Week 3",
+        "Week 4",
+        "Week 5",
+        "Week 6"
+      ],
+      "spend": [
+        900,
+        1200,
+        1100,
+        1500,
+        1700,
+        1600
+      ],
+      "visits": [
+        3200,
+        4100,
+        3950,
+        5200,
+        5900,
+        5650
+      ],
+      "orders": [
+        72,
+        89,
+        83,
+        114,
+        132,
+        126
+      ]
+    },
+    "monthly": {
+      "labels": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr"
+      ],
+      "spend": [
+        600,
+        1200,
+        2600,
+        5200
+      ],
+      "visits": [
+        900,
+        2400,
+        7200,
+        18000
+      ],
+      "orders": [
+        14,
+        45,
+        120,
+        310
+      ]
+    }
+  }
+}

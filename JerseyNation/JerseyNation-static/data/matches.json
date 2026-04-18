@@ -1,0 +1,26 @@
+[
+  {
+    "homeTeam": "Mexico",
+    "awayTeam": "South Africa",
+    "homeFlagImage": "images/flags/mx.png",
+    "awayFlagImage": "images/flags/za.png",
+    "matchDate": "2026-06-11T20:00:00",
+    "venue": "Mexico City"
+  },
+  {
+    "homeTeam": "Korea Republic",
+    "awayTeam": "Czechia",
+    "homeFlagImage": "images/flags/kr.png",
+    "awayFlagImage": "images/flags/cz.png",
+    "matchDate": "2026-06-11T20:00:00",
+    "venue": "Guadalajara"
+  },
+  {
+    "homeTeam": "USA",
+    "awayTeam": "Paraguay",
+    "homeFlagImage": "images/flags/us.png",
+    "awayFlagImage": "images/flags/py.png",
+    "matchDate": "2026-06-12T18:00:00",
+    "venue": "Los Angeles"
+  }
+]

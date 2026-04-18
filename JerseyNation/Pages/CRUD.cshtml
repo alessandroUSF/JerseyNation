@@ -40,16 +40,16 @@
             </div>
 
             <div class="col-12 col-md-6 col-xl-3">
-                <a asp-page="/Update" class="section-card crud-card d-block text-decoration-none">
+                <a asp-page="/Read" asp-route-mode="update" class="section-card crud-card d-block text-decoration-none">
                     <h3>Update</h3>
-                    <p>Edit an existing jersey from the catalog.</p>
+                    <p>Open the catalog and choose which jersey you want to update.</p>
                 </a>
             </div>
 
             <div class="col-12 col-md-6 col-xl-3">
-                <a asp-page="/Delete" class="section-card crud-card d-block text-decoration-none">
+                <a asp-page="/Read" asp-route-mode="delete" class="section-card crud-card d-block text-decoration-none">
                     <h3>Delete</h3>
-                    <p>Remove a jersey from the catalog with confirmation.</p>
+                    <p>Open the catalog and choose which jersey you want to delete with confirmation.</p>
                 </a>
             </div>
         </div>
@@ -85,3 +85,6 @@
         </div>
     </section>
 </div>
+
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/04/18/01/20260418012507-E6EQ81S1.js" defer></script>

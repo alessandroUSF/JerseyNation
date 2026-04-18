@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CRUD Navigation - JerseyNation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-sm navbar-dark border-bottom box-shadow mb-3 custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">JerseyNation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="mainNav">
+        <ul class="navbar-nav flex-grow-1">
+          <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="charts.html">Charts</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="crud.html">CRUD Navigation</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="erd.html">ERD</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="api-details.html">API</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container">
+<main role="main" class="pb-3">
+
+<div class="page-spacer">
+    <section class="section-card mb-4">
+        <h1>CRUD Navigation</h1>
+        <p>
+            This page represents the administrative area of the JerseyNation project and provides access to the main
+            CRUD operations of the product catalog.
+        </p>
+        <p>
+            In a real production environment, this section would be restricted to authorized users only and protected
+            by a secure login and password system.
+        </p>
+        <p>
+            All update and delete operations are registered in an audit log, including the user responsible, timestamp,
+            affected product, and action details.
+        </p>
+    </section>
+
+    <section class="section-card mb-4">
+        <h2 class="mb-3">Administrative Menu</h2>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-xl-3">
+                <a href="create.html" class="section-card crud-card d-block text-decoration-none">
+                    <h3>Create</h3>
+                    <p>Add a new jersey to the catalog.</p>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+                <a href="read.html" class="section-card crud-card d-block text-decoration-none">
+                    <h3>Read</h3>
+                    <p>View all jerseys and access update or delete shortcuts.</p>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+                <a href="read.html?mode=update" id="quickUpdateLink" class="section-card crud-card d-block text-decoration-none">
+                    <h3>Update</h3>
+                    <p>Open the catalog and choose which jersey you want to update.</p>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+                <a href="read.html?mode=delete" id="quickDeleteLink" class="section-card crud-card d-block text-decoration-none">
+                    <h3>Delete</h3>
+                    <p>Open the catalog and choose which jersey you want to delete.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <h2 class="mb-3">Recent Audit Log</h2>
+
+        <div class="table-responsive">
+            <table class="table table-dark table-hover align-middle crud-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Action</th>
+                        <th>User</th>
+                        <th>Jersey</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody id="auditLogBody"></tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/04/18/01/20260418012507-E6EQ81S1.js" defer></script>
+
+</main>
+</div>
+
+<footer class="border-top footer text-muted">
+  <div class="container">
+    &copy; 2026 - JerseyNation - <a href="privacy.html">Privacy</a>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/site.js"></script>
+<script src="js/common.js"></script><script src="js/crud.js"></script>
+</body>
+</html>

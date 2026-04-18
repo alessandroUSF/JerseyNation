@@ -1,0 +1,346 @@
+[
+  {
+    "id": 1,
+    "team": "Argentina",
+    "name": "Argentina 2026 Home Jersey",
+    "jerseyType": "Home Jersey",
+    "audience": "Men",
+    "color": "Sky Blue / White",
+    "jerseyNumber": 10,
+    "isGoalkeeperJersey": false,
+    "costPrice": 48.0,
+    "salePrice": 94.99,
+    "promoPrice": 79.99,
+    "isPromotion": true,
+    "isBestSeller": true,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "unavailableSizes": [
+      "XL"
+    ],
+    "primaryImage": "images/jerseys/argentina-home-1.jpg",
+    "secondaryImage": "images/jerseys/argentina-home-2.jpg",
+    "description": "Official match-inspired home jersey with lightweight performance fabric."
+  },
+  {
+    "id": 2,
+    "team": "Brazil",
+    "name": "Brazil 2026 Home Jersey",
+    "jerseyType": "Home Jersey",
+    "audience": "Women",
+    "color": "Yellow / Green",
+    "jerseyNumber": 9,
+    "isGoalkeeperJersey": false,
+    "costPrice": 50.0,
+    "salePrice": 96.99,
+    "promoPrice": 84.99,
+    "isPromotion": true,
+    "isBestSeller": true,
+    "sizes": [
+      "S",
+      "M"
+    ],
+    "unavailableSizes": [
+      "L",
+      "XL"
+    ],
+    "primaryImage": "images/jerseys/brazil-home-1.jpg",
+    "secondaryImage": "images/jerseys/brazil-home-2.jpg",
+    "description": "Official women’s home jersey with modern fit and breathable fabric."
+  },
+  {
+    "id": 3,
+    "team": "England",
+    "name": "England 2026 Away Jersey",
+    "jerseyType": "Away Jersey",
+    "audience": "Men",
+    "color": "Navy / Red",
+    "jerseyNumber": 7,
+    "isGoalkeeperJersey": false,
+    "costPrice": 52.0,
+    "salePrice": 99.99,
+    "promoPrice": null,
+    "isPromotion": false,
+    "isBestSeller": true,
+    "sizes": [
+      "L"
+    ],
+    "unavailableSizes": [
+      "S",
+      "M",
+      "XL"
+    ],
+    "primaryImage": "images/jerseys/england-away-1.jpg",
+    "secondaryImage": "images/jerseys/england-away-2.jpg",
+    "description": "Official away jersey designed for comfort and match-day style."
+  },
+  {
+    "id": 4,
+    "team": "France",
+    "name": "France 2026 Home Jersey",
+    "jerseyType": "Home Jersey",
+    "audience": "Youth",
+    "color": "Blue / Gold",
+    "jerseyNumber": 8,
+    "isGoalkeeperJersey": false,
+    "costPrice": 40.0,
+    "salePrice": 79.99,
+    "promoPrice": null,
+    "isPromotion": false,
+    "sizes": [
+      "L"
+    ],
+    "unavailableSizes": [
+      "S",
+      "M",
+      "XL"
+    ],
+    "primaryImage": "images/jerseys/france-home-1.jpg",
+    "secondaryImage": "images/jerseys/france-home-2.jpg",
+    "description": "Official youth home jersey for young supporters."
+  },
+  {
+    "id": 5,
+    "team": "Mexico",
+    "name": "Mexico 2026 Training Jersey",
+    "jerseyType": "Training Jersey",
+    "audience": "Men",
+    "color": "Green / Black",
+    "jerseyNumber": 11,
+    "isGoalkeeperJersey": false,
+    "costPrice": 35.0,
+    "salePrice": 74.99,
+    "promoPrice": 64.99,
+    "isPromotion": true,
+    "sizes": [
+      "L"
+    ],
+    "unavailableSizes": [
+      "S",
+      "M",
+      "XL"
+    ],
+    "primaryImage": "images/jerseys/mexico-training-1.jpg",
+    "secondaryImage": "images/jerseys/mexico-training-2.jpg",
+    "description": "Training jersey with flexible fabric and lightweight construction."
+  },
+  {
+    "id": 6,
+    "team": "United States",
+    "name": "United States 2026 Women Goalkeeper Jersey",
+    "jerseyType": "Goalkeeper Jersey",
+    "audience": "Women",
+    "color": "Black",
+    "jerseyNumber": 1,
+    "isGoalkeeperJersey": true,
+    "costPrice": 49.0,
+    "salePrice": 92.99,
+    "promoPrice": null,
+    "isPromotion": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "unavailableSizes": [
+      "XL"
+    ],
+    "primaryImage": "images/jerseys/usa-w-goalkeeper-1.jpg",
+    "secondaryImage": "images/jerseys/usa-w-goalkeeper-2.jpg",
+    "description": "Official women’s goalkeeper jersey with a modern fit and premium match styling."
+  },
+  {
+    "id": 7,
+    "team": "Brazil",
+    "name": "Brazil Signed 2026 Home Jersey",
+    "jerseyType": "Home Jersey",
+    "audience": "Men",
+    "color": "Yellow / Green",
+    "jerseyNumber": 10,
+    "isGoalkeeperJersey": false,
+    "costPrice": 130.0,
+    "salePrice": 259.99,
+    "promoPrice": 229.99,
+    "isPromotion": true,
+    "isSpecial": true,
+    "isSigned": true,
+    "isRare": true,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "unavailableSizes": [
+      "S"
+    ],
+    "primaryImage": "images/jerseys/brazil-signed-1.jpg",
+    "secondaryImage": "images/jerseys/brazil-signed-2.jpg",
+    "description": "Authenticated signed by Vini Jr, Neymar and Enderson special-edition jersey from the premium collection."
+  },
+  {
+    "id": 8,
+    "team": "Argentina",
+    "name": "Argentina Match-Worn Special Jersey",
+    "jerseyType": "Home Jersey",
+    "audience": "Men",
+    "color": "Sky Blue / White",
+    "jerseyNumber": 10,
+    "isGoalkeeperJersey": false,
+    "costPrice": 320.0,
+    "salePrice": 649.99,
+    "promoPrice": null,
+    "isPromotion": false,
+    "isSpecial": true,
+    "isMatchWorn": true,
+    "isRare": true,
+    "sizes": [
+      "L"
+    ],
+    "unavailableSizes": [
+      "S",
+      "M",
+      "XL"
+    ],
+    "primaryImage": "images/jerseys/argentina-matchworn-1.jpg",
+    "secondaryImage": "images/jerseys/argentina-matchworn-2.jpg",
+    "description": "Premium authenticated match-worn piece from a tournament special inventory."
+  },
+  {
+    "id": 9,
+    "team": "United States",
+    "name": "United States Training-Worn Special Jersey",
+    "jerseyType": "Training Jersey",
+    "audience": "Men",
+    "color": "Navy / White",
+    "jerseyNumber": 4,
+    "isGoalkeeperJersey": false,
+    "costPrice": 180.0,
+    "salePrice": 349.99,
+    "promoPrice": 299.99,
+    "isPromotion": true,
+    "isSpecial": true,
+    "isTrainingWorn": true,
+    "isRare": true,
+    "sizes": [
+      "M",
+      "L"
+    ],
+    "unavailableSizes": [
+      "S",
+      "XL"
+    ],
+    "primaryImage": "images/jerseys/usa-trainingworn-1.jpg",
+    "secondaryImage": "images/jerseys/usa-trainingworn-2.jpg",
+    "description": "Authenticated training-worn item from the premium collector selection."
+  },
+  {
+    "id": 10,
+    "team": "France",
+    "name": "France Limited Goalkeeper Gold Jersey",
+    "jerseyType": "Away Jersey",
+    "audience": "Men",
+    "color": "Gold / Black",
+    "jerseyNumber": 1,
+    "isGoalkeeperJersey": true,
+    "costPrice": 110.0,
+    "salePrice": 219.99,
+    "promoPrice": null,
+    "isPromotion": false,
+    "isSpecial": true,
+    "isRare": true,
+    "sizes": [
+      "L"
+    ],
+    "unavailableSizes": [
+      "S",
+      "M",
+      "XL"
+    ],
+    "primaryImage": "images/jerseys/france-goalkeeper-gold-1.jpg",
+    "secondaryImage": "images/jerseys/france-goalkeeper-gold-2.jpg",
+    "description": "Limited premium goalkeeper jersey with collector appeal and gold detailing."
+  },
+  {
+    "id": 11,
+    "team": "Brazil",
+    "name": "Brazil 2026 Away Jersey",
+    "jerseyType": "Away Jersey",
+    "audience": "Men",
+    "color": "Dark Blue / Green",
+    "jerseyNumber": 10,
+    "isGoalkeeperJersey": false,
+    "costPrice": 54.0,
+    "salePrice": 104.99,
+    "promoPrice": 94.99,
+    "isPromotion": true,
+    "isBestSeller": true,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "unavailableSizes": [
+      "XXL"
+    ],
+    "primaryImage": "images/jerseys/brazil-away-1.jpg",
+    "secondaryImage": "images/jerseys/brazil-away-2.jpg",
+    "description": "Official Brazil away jersey with a dark blue design and premium match-inspired styling."
+  },
+  {
+    "id": 12,
+    "team": "United States",
+    "name": "United States 2026 Men Goalkeeper Jersey",
+    "jerseyType": "Goalkeeper Jersey",
+    "audience": "Men",
+    "color": "Green",
+    "jerseyNumber": 1,
+    "isGoalkeeperJersey": true,
+    "costPrice": 52.0,
+    "salePrice": 98.99,
+    "promoPrice": null,
+    "isPromotion": false,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "unavailableSizes": [
+      "XXL"
+    ],
+    "primaryImage": "images/jerseys/usa-goalkeeper-1.jpg",
+    "secondaryImage": "images/jerseys/usa-goalkeeper-2.jpg",
+    "description": "Official men’s goalkeeper jersey with a bold green design and match-ready look."
+  },
+  {
+    "id": 13,
+    "team": "South Africa",
+    "name": "South Africa 2026 Away Jersey",
+    "jerseyType": "Away Jersey",
+    "audience": "Men",
+    "color": "Dark Green",
+    "jerseyNumber": 9,
+    "isGoalkeeperJersey": false,
+    "costPrice": 46.0,
+    "salePrice": 89.99,
+    "promoPrice": 79.99,
+    "isPromotion": true,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "unavailableSizes": [
+      "XXL"
+    ],
+    "primaryImage": "images/jerseys/south-africa-away-1.jpg",
+    "secondaryImage": "images/jerseys/south-africa-away-2.jpg",
+    "description": "Official South Africa away jersey with a dark green look and performance fabric."
+  }
+]
